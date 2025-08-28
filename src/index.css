@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Family Dhaba Design System - Premium Restaurant Theme */
+
+@layer base {
+  :root {
+    /* Premium Dark Dhaba Color Palette */
+    --dhaba-gold: 45 95% 65%;
+    --dhaba-gold-light: 48 100% 75%;
+    --dhaba-gold-dark: 35 80% 45%;
+    --dhaba-amber: 35 100% 55%;
+    --dhaba-copper: 25 85% 45%;
+    --dhaba-charcoal: 220 15% 8%;
+    --dhaba-charcoal-light: 220 12% 15%;
+    --dhaba-charcoal-medium: 220 10% 22%;
+    --dhaba-cream: 45 20% 95%;
+    --dhaba-cream-warm: 35 15% 85%;
+    --dhaba-spice-red: 10 85% 60%;
+    --dhaba-tandoor-orange: 20 90% 65%;
+    --dhaba-mint: 140 45% 70%;
+    --dhaba-premium-black: 220 20% 5%;
+    --dhaba-glass: 220 15% 12%;
+    
+    /* Dark Premium Theme - Default */
+    --background: var(--dhaba-charcoal);
+    --foreground: var(--dhaba-cream);
+    --card: var(--dhaba-charcoal-light);
+    --card-foreground: var(--dhaba-cream);
+    --popover: var(--dhaba-charcoal-medium);
+    --popover-foreground: var(--dhaba-cream);
+    
+    --primary: var(--dhaba-gold);
+    --primary-foreground: var(--dhaba-charcoal);
+    --primary-glow: var(--dhaba-gold-light);
+    
+    --secondary: var(--dhaba-charcoal-medium);
+    --secondary-foreground: var(--dhaba-cream);
+    
+    --muted: var(--dhaba-charcoal-light);
+    --muted-foreground: 45 30% 65%;
+    
+    --accent: var(--dhaba-amber);
+    --accent-foreground: var(--dhaba-charcoal);
+    
+    --destructive: var(--dhaba-spice-red);
+    --destructive-foreground: var(--dhaba-cream);
+    
+    --border: 220 15% 25%;
+    --input: 220 12% 18%;
+    --ring: var(--dhaba-gold);
+    
+    --radius: 0.75rem;
+    
+    /* Premium Dark Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--dhaba-gold)) 0%, hsl(var(--dhaba-amber)) 50%, hsl(var(--dhaba-copper)) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(var(--dhaba-charcoal-light)) 0%, hsl(var(--dhaba-charcoal)) 100%);
+    --gradient-tandoor: linear-gradient(45deg, hsl(var(--dhaba-tandoor-orange)) 0%, hsl(var(--dhaba-spice-red)) 100%);
+    --gradient-metal: linear-gradient(135deg, hsl(var(--dhaba-premium-black)) 0%, hsl(var(--dhaba-charcoal)) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(var(--dhaba-glass) / 0.8) 0%, hsl(var(--dhaba-charcoal-light) / 0.6) 100%);
+    --gradient-navbar: linear-gradient(180deg, hsl(var(--dhaba-premium-black) / 0.95) 0%, hsl(var(--dhaba-charcoal) / 0.9) 100%);
+    
+    /* Premium Dark Shadows */
+    --shadow-warm: 0 15px 50px -10px hsl(var(--dhaba-gold) / 0.4);
+    --shadow-deep: 0 25px 80px -15px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 40px hsl(var(--dhaba-gold) / 0.6);
+    --shadow-card: 0 8px 30px -5px hsl(0 0% 0% / 0.3);
+    --shadow-premium: 0 20px 60px -10px hsl(0 0% 0% / 0.5);
+    
+    /* Smooth Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elegant: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .light {
+    --background: 45 20% 95%;
+    --foreground: 220 15% 8%;
+    --card: 45 15% 92%;
+    --card-foreground: 220 15% 8%;
+    --popover: 45 20% 95%;
+    --popover-foreground: 220 15% 8%;
+    
+    --primary: var(--dhaba-gold-dark);
+    --primary-foreground: var(--dhaba-cream);
+    
+    --muted: 45 15% 88%;
+    --muted-foreground: 220 10% 35%;
+    
+    --border: 45 25% 80%;
+    --input: 45 20% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography Hierarchy */
+  .dhaba-heading {
+    @apply font-playfair font-bold text-foreground;
+  }
+  
+  .dhaba-subheading {
+    @apply font-poppins font-semibold text-foreground;
+  }
+  
+  .dhaba-body {
+    @apply font-poppins text-muted-foreground;
+  }
+  
+  .dhaba-hindi {
+    @apply font-devanagari;
+  }
+}
+
+@layer components {
+  /* Hero Animations */
+  .steam-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .steam-effect::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 120%;
+    height: 200%;
+    background: linear-gradient(180deg, 
+      transparent 0%, 
+      hsl(var(--dhaba-cream) / 0.1) 30%, 
+      hsl(var(--dhaba-cream) / 0.2) 50%, 
+      hsl(var(--dhaba-cream) / 0.1) 70%, 
+      transparent 100%);
+    animation: steam-rise 8s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  /* Tandoor Glow Effect */
+  .tandoor-glow {
+    position: relative;
+    background: var(--gradient-tandoor);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .tandoor-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(20px);
+    opacity: 0.6;
+    z-index: -1;
+    animation: glow-pulse 3s ease-in-out infinite alternate;
+  }
+  
+  /* Spice Particle Animation */
+  .spice-particles {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .spice-particles::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(var(--dhaba-gold)), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(var(--dhaba-amber)), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(var(--dhaba-spice-red)), transparent);
+    background-size: 100px 100px;
+    animation: spice-float 20s linear infinite;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  
+  /* Premium Card Styles */
+  .dhaba-card {
+    @apply bg-card border border-border rounded-[var(--radius)] p-6;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+  
+  .dhaba-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-warm);
+  }
+  
+  /* Menu Item Styles */
+  .menu-item {
+    @apply dhaba-card flex justify-between items-start gap-4;
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  }
+  
+  .menu-item:hover {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.05) 0%, hsl(var(--accent) / 0.05) 100%);
+  }
+  
+  /* Floating Offer Banner */
+  .floating-offer {
+    @apply bg-gradient-to-r from-[hsl(var(--dhaba-spice-red))] to-[hsl(var(--dhaba-tandoor-orange))];
+    @apply text-white px-4 py-2 rounded-full;
+    box-shadow: var(--shadow-glow);
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Special Highlight */
+  .todays-special {
+    position: relative;
+    @apply border-2 border-[hsl(var(--dhaba-gold))];
+    background: linear-gradient(135deg, 
+      hsl(var(--dhaba-gold) / 0.1) 0%, 
+      hsl(var(--dhaba-amber) / 0.1) 100%);
+  }
+  
+  .todays-special::before {
+    content: '⭐ Today\'s Special';
+    position: absolute;
+    top: -12px;
+    left: 16px;
+    @apply bg-[hsl(var(--dhaba-gold))] text-[hsl(var(--dhaba-charcoal))];
+    @apply px-3 py-1 rounded-full text-sm font-semibold;
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes steam-rise {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+    50% { transform: translateY(-100px) rotate(180deg); opacity: 1; }
+  }
+  
+  @keyframes glow-pulse {
+    0% { opacity: 0.4; transform: scale(1); }
+    100% { opacity: 0.8; transform: scale(1.05); }
+  }
+  
+  @keyframes spice-float {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(100vw); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  /* GSAP Animation Classes */
+  .gsap-fade-up {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  
+  .gsap-fade-in {
+    opacity: 0;
+  }
+  
+  .gsap-scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  .gsap-slide-left {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  
+  .gsap-slide-right {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* hide scrollbar cross-browser */
+.no-scrollbar {
+  -ms-overflow-style: none;      /* IE and Edge */
+  scrollbar-width: none;         /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari, Opera */
+}
