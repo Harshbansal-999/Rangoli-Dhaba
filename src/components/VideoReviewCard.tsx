@@ -105,12 +105,12 @@ const VideoReviewCard = () => {
   };
 
   return (
-    <div className="dhaba-card bg-dhaba-charcoal/60 border-dhaba-gold/30 hover:border-dhaba-gold/60 transition-all duration-300 overflow-hidden">
+    <div className="dhaba-card bg-dhaba-charcoal/60 border-dhaba-gold/30 hover:border-dhaba-gold/60 transition-all duration-300 overflow-hidden p-2">
       {/* Header */}
-      <div className="p-4 sm:p-6 pb-0">
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <h3 className="dhaba-hindi text-lg sm:text-xl font-semibold text-dhaba-cream mb-1">
+      <div className="p-[0px] sm:p-6 pb-0 text-center">
+        <div className="flex items-center justify-center mb-4 ">
+          <div >
+            <h3 className="dhaba-hindi text-lg sm:text-xl font-semibold text-dhaba-cream mb-1 ">
               वीडियो समीक्षा
             </h3>
             <p className="text-dhaba-gold font-medium text-sm sm:text-base">Customer Video Reviews</p>
@@ -153,7 +153,7 @@ const VideoReviewCard = () => {
                 variant="ghost"
                 size="lg"
                 onClick={togglePlay}
-                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-dhaba-gold/90 hover:bg-dhaba-gold text-dhaba-charcoal backdrop-blur-sm"
+                className="w-4 h-8 sm:w-16 sm:h-16 rounded-full bg-dhaba-gold/90 hover:bg-dhaba-gold text-dhaba-charcoal backdrop-blur-sm"
               >
                 {isPlaying ? (
                   <Pause className="w-6 h-6 sm:w-8 sm:h-8" />

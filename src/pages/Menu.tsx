@@ -550,26 +550,35 @@ const Menu = () => {
 
        {/* Image Modal */}
        {selectedImage && (
-         <div 
-           className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
-           onClick={() => setSelectedImage(null)}
-         >
-           <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl max-h-[85vh] sm:max-h-[90vh]">
-             <button
-               onClick={() => setSelectedImage(null)}
-               className="absolute -top-8 sm:-top-12 right-0 text-white hover:text-dhaba-gold transition-colors z-10 p-1"
-             >
-               <X className="w-6 h-6 sm:w-8 sm:h-8" />
-             </button>
-             <img
-               src={selectedImage.url}
-               alt={selectedImage.alt}
-               className="w-full h-full object-contain rounded-lg max-h-[80vh] sm:max-h-[85vh]"
-               onClick={(e) => e.stopPropagation()}
-             />
-            </div>
-          </div>
-        )}
+  <div 
+    className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
+    onClick={() => setSelectedImage(null)}
+  >
+    {/* Container ko responsive max-width/height do */}
+    <div className="relative w-full max-h-[85vh] sm:max-h-[90vh]">
+      <button
+        onClick={() => setSelectedImage(null)}
+        className="absolute -top-8 sm:-top-12 right-0 text-white hover:text-dhaba-gold transition-colors z-10 p-1"
+      >
+        <X className="w-6 h-6 sm:w-8 sm:h-8" />
+      </button>
+
+      {/* Image: responsive chhota + center + object-contain */}
+      <img
+        src={selectedImage.url}
+        alt={selectedImage.alt}
+        className="
+          block mx-auto rounded-lg object-contain
+          max-w-[85vw] sm:max-w-[75vw] md:max-w-[65vw] lg:max-w-[55vw] xl:max-w-[45vw]
+          max-h-[70vh] sm:max-h-[75vh] md:max-h-[80vh]
+          shadow-2xl
+        "
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  </div>
+)}
+
       </div>
     </div>
   );
