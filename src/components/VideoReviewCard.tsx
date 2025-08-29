@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX, Expand } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import VideoModal from './VideoModal';
+// import VideoModal from './VideoModal';
 
 interface VideoReview {
   id: string;
@@ -228,12 +228,12 @@ const VideoReviewCard = () => {
       
 
       {/* Video Modal */}
-      <VideoModal
+      {/* <VideoModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         videos={videoReviews}
         initialVideoIndex={currentVideoIndex}
-      />
+      /> */}
     </div>
   );
 };
