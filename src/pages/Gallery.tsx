@@ -165,7 +165,7 @@ const Gallery = () => {
         <section className="py-8 sm:py-16 md:py-12 px-4 relative overflow-hidden">
           <div className="absolute inset-0 steam-effect spice-particles opacity-30" />
           <div className="container mx-auto text-center relative z-10">
-            <h1 className="dhaba-heading text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-dhaba-cream mb-4">
+            <h1 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4 font-kalam">
               फोटो गैलरी
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6">
@@ -187,7 +187,7 @@ const Gallery = () => {
                 onClick={() => setFilter(category.id)}
                 className="flex-col h-auto py-2 md:py-3 px-3 md:px-6 bg-dhaba-charcoal/40 border-dhaba-gold/20 text-dhaba-cream hover:bg-dhaba-gold hover:text-dhaba-charcoal text-xs sm:text-sm"
               >
-                <span className="dhaba-hindi text-xs sm:text-sm">{category.name_hindi}</span>
+                <span className="dhaba-hindi text-xs sm:text-sm font-Playpen">{category.name_hindi}</span>
                 <span className="text-xs">{category.name}</span>
               </Button>
             ))}
@@ -211,7 +211,7 @@ const Gallery = () => {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dhaba-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-                      <h3 className="dhaba-hindi text-white font-semibold text-base md:text-lg mb-1">
+                      <h3 className="dhaba-hindi text-white font-semibold text-base md:text-lg mb-1 font-Playpen">
                         {image.title_hindi}
                       </h3>
                       <p className="text-dhaba-cream/80 text-xs md:text-sm">

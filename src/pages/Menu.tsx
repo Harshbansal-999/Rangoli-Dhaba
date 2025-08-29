@@ -277,13 +277,13 @@ const Menu = () => {
         <section className="py-8 sm:py-16 md:py-12 px-4 relative overflow-hidden">
           <div className="absolute inset-0 spice-particles opacity-20" />
           <div className="container mx-auto text-center relative z-10">
-            <h1 className="dhaba-heading text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-dhaba-cream mb-4">
+            <h1 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4 font-kalam">
               हमारा मेनू
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6">
               Our Menu
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-dhaba-cream/70 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base lg:text-lg text-dhaba-cream/70 max-w-2xl mx-auto ">
               Authentic flavors from across India, prepared with love and traditional recipes
             </p>
           </div>
@@ -368,7 +368,7 @@ const Menu = () => {
                     onClick={() => setActiveCategory(category.name_en)}
                     className="whitespace-nowrap flex-col h-auto py-2 md:py-3 px-3 md:px-4 min-w-fit text-dhaba-cream hover:text-dhaba-charcoal text-xs md:text-sm"
                   >
-                    <span className="dhaba-hindi text-xs md:text-sm">{category.name_hi}</span>
+                    <span className="dhaba-hindi text-xs md:text-sm font-Playpen">{category.name_hi}</span>
                     <span className="text-xs">{category.name_en}</span>
                   </Button>
                 ))}
@@ -385,7 +385,7 @@ const Menu = () => {
                     <div className="bg-dhaba-gold text-dhaba-charcoal px-3 py-1 rounded-full text-xs md:text-sm font-bold mr-2">
                       Today's Special
                     </div>
-                    <div className="bg-dhaba-gold text-dhaba-charcoal px-2 py-1 rounded-full text-xs font-medium">
+                    <div className="bg-dhaba-gold text-dhaba-charcoal px-2 py-1 rounded-full text-xs font-medium font-Playpen">
                       आज का स्पेशल
                     </div>
                   </div>
@@ -406,7 +406,7 @@ const Menu = () => {
                     
                     {/* Content */}
                     <div className="md:col-span-2 text-center md:text-left">
-                      <h2 className="dhaba-heading text-xl sm:text-2xl md:text-3xl text-dhaba-cream mb-2">
+                      <h2 className="dhaba-heading text-xl sm:text-2xl md:text-3xl text-dhaba-cream mb-2 font-Playpen">
                         {todaysSpecial.name_hi}
                       </h2>
                       <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-3">
@@ -455,7 +455,7 @@ const Menu = () => {
               <p className="text-dhaba-cream/70">Loading dishes...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-6xl mx-auto justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-6xl mx-auto justify-items-center">
               {filteredItems.map(item => {
                 const isVeg = isVegetarian(item);
                 const isSpicyDish = isSpicy(item);
@@ -484,7 +484,7 @@ const Menu = () => {
                     <div className="flex-1 flex flex-col">
                       {/* Title section */}
                       <div className="mb-2">
-                        <h3 className="dhaba-hindi font-semibold text-base text-dhaba-cream line-clamp-1">
+                        <h3 className="dhaba-hindi font-semibold text-base text-dhaba-cream line-clamp-1 font-Playpen py-2">
                           {item.name_hi}
                         </h3>
                         <h4 className="font-medium text-dhaba-gold text-sm line-clamp-1">

@@ -30,10 +30,10 @@ const Navigation = () => {
               className="w-12 sm:w-14 h-auto object-contain group-hover:scale-110 transition-[var(--transition-bounce)]"
             />
             <div className="flex flex-col">
-              <span className="dhaba-heading text-base sm:text-lg leading-none text-dhaba-cream">
+              <span className="dhaba-heading text-base sm:text-lg leading-none text-dhaba-cream font-thin">
                 Rangoli Dhaba & Restaurant
               </span>
-              <span className="dhaba-hindi text-xs text-dhaba-gold hidden sm:block">
+              <span className="dhaba-hindi text-xs text-dhaba-gold hidden sm:block font-kalam">
                 स्वाद जो घर की याद दिला दे
               </span>
             </div>
@@ -52,7 +52,7 @@ const Navigation = () => {
                     : "text-dhaba-cream/70 hover:text-dhaba-cream hover:bg-dhaba-charcoal-light/50"
                 )}
               >
-                <span className="dhaba-hindi text-xs lg:text-sm group-hover:scale-110 transition-transform">
+                <span className="dhaba-hindi text-xs lg:text-sm group-hover:scale-110 transition-transform font-Playpen">
                   {item.name}
                 </span>
                 <span className="text-xs font-medium">{item.name_en}</span>

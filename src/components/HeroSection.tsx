@@ -117,17 +117,17 @@ const HeroSection = () => {
                 </div>
 
                 {/* Main Title */}
-                <h1 className="dhaba-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dhaba-cream mb-4 drop-shadow-2xl leading-tight">
+                <h1 className="dhaba-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dhaba-cream mb-4 drop-shadow-2xl leading-tight font-devanagari">
                   Rangoli Dhaba & Restaurant
                 </h1>
-                <p className="dhaba-hindi text-xl sm:text-2xl lg:text-3xl text-dhaba-gold-light font-medium">
+                <p className="dhaba-hindi text-xl sm:text-2xl lg:text-3xl text-dhaba-gold-light font-medium font-kalam">
                   स्वाद जो घर की याद दिला दे...
                 </p>
               </div>
 
               {/* Subtitle */}
               <div ref={subtitleRef} className="mb-8">
-                <p className="text-lg sm:text-xl lg:text-2xl text-dhaba-cream/90 leading-relaxed">
+                <p className="text-lg sm:text-xl lg:text-2xl text-dhaba-cream/90 leading-relaxed font-bold">
                   Authentic home-style flavors, crafted from timeless family recipes. Experience the warmth of dining that feels just like home
                 </p>
                 <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-8 mt-6 text-dhaba-cream/80">

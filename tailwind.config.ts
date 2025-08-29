@@ -22,6 +22,9 @@ export default {
 				'playfair': ['Playfair Display', 'serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 				'devanagari': ['Noto Sans Devanagari', 'sans-serif'],
+				'kalam' :["Kalam", "cursive"],
+				'Playpen':["Playpen Sans Deva","cursive"],
+				'Rock' : ["Rock Salt", "cursive"]
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -127,3 +130,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

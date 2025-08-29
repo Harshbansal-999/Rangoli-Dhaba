@@ -181,7 +181,7 @@ const Contact = () => {
         <section className="py-8 sm:py-16 md:py-12 px-4 overflow-hidden relative">
           <div className="absolute inset-0 steam-effect spice-particles opacity-20" />
           <div className="container mx-auto text-center relative z-10">
-            <h1 className="dhaba-heading text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-dhaba-cream mb-4">
+            <h1 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4 font-kalam">
               संपर्क करें
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6">
@@ -234,7 +234,7 @@ const Contact = () => {
                   <div className={`w-16 h-16 ${info.color} bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
                     <Icon className={`w-8 h-8 ${info.color}`} />
                   </div>
-                  <h3 className="dhaba-hindi font-semibold text-lg text-dhaba-cream mb-1">{info.title}</h3>
+                  <h3 className="dhaba-hindi font-semibold text-lg text-dhaba-cream mb-1 font-Playpen">{info.title}</h3>
                   <h4 className="font-medium text-dhaba-gold mb-3">{info.title_en}</h4>
                   <p className="text-dhaba-cream/70 mb-4 leading-relaxed">{info.value}</p>
                   <Button
@@ -255,10 +255,10 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
             {/* Contact Card (अब form की जगह image) */}
             <div className="dhaba-card bg-dhaba-charcoal/60 border-dhaba-gold/30 flex flex-col items-center justify-center">
-              <h3 className="dhaba-heading text-xl md:text-2xl text-dhaba-cream mb-2">
+              <h3 className="dhaba-heading text-xl md:text-2xl text-dhaba-cream mb-2 font-playfair">
                 We humbly invite you to give us a chance to serve you
               </h3>
-              <p className="dhaba-hindi text-dhaba-gold mb-4 md:mb-6 text-sm md:text-base">
+              <p className="dhaba-hindi text-dhaba-gold mb-4 md:mb-6 text-l md:text-base font-Playpen">
                 एक बार सेवा का मौका अवश्य दें
               </p>
 
@@ -330,7 +330,7 @@ const Contact = () => {
                   </div>
 
                   <div className="pt-4 border-t border-dhaba-gold/20">
-                    <p className="dhaba-hindi text-dhaba-gold font-medium mb-2">
+                    <p className="dhaba-hindi text-dhaba-gold font-medium mb-2 font-Playpen">
                       पार्किंग की सुविधा उपलब्ध
                     </p>
                     <p className="text-sm text-dhaba-cream/70">

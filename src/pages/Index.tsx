@@ -130,9 +130,9 @@ const Index = () => {
       location: "Mumbai",
       rating: 5,
       date: "1 week ago",
-      review: "Best tandoor chicken in the city! The ambience is perfect for family dining.",
-      review_hindi: "शहर का सबसे अच्छा तंदूरी चिकन! पारिवारिक भोजन के लिए एकदम सही माहौल।",
-      dish: "Tandoor Chicken",
+      review: "Best butter naan in the city! The ambience is perfect for family dining.",
+      review_hindi: "शहर का सबसे अच्छा बटर नान! पारिवारिक भोजन के लिए एकदम सही माहौल।",
+      dish: "Butter Naan",
       avatar: customerRahulImg,
       verified: true
     },
@@ -200,7 +200,7 @@ const Index = () => {
           <div className="absolute inset-0 spice-particles opacity-10" />
           <div className="container mx-auto relative z-10">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="dhaba-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4">
+              <h2 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4 font-kalam">
                 हमारे खास व्यंजन
               </h2>
               <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6">
@@ -247,7 +247,7 @@ const Index = () => {
         <section className="py-4 sm:py-4 md:py-4 px-1 sm:px-4 relative z-10">
           <div className="container mx-auto">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="dhaba-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4">
+              <h2 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4 font-kalam">
                 हमारी विशेषताएं
               </h2>
               <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6">
@@ -271,7 +271,7 @@ const Index = () => {
                       </div>
                     </div>
                     <div className="px-2">
-                      <h3 className="dhaba-hindi text-base md:text-lg font-semibold text-dhaba-cream mb-2">
+                      <h3 className="dhaba-hindi text-base md:text-lg font-semibold text-dhaba-cream mb-2 font-Playpen">
                         {feature.title_hindi}
                       </h3>
                       <h4 className="font-semibold text-dhaba-gold mb-3 text-sm md:text-base">
@@ -294,19 +294,19 @@ const Index = () => {
           <div className="container mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <div className="order-2 lg:order-1">
-                <h2 className="dhaba-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6">
+                <h2 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl mb-4 md:mb-6 font-kalam">
                   हमारी कहानी
                 </h2>
                 <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-6 md:mb-8">
                   Our Story
                 </h3>
-                <p className="text-dhaba-cream/80 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 md:mb-6">
+                <p className="text-dhaba-cream/80 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 md:mb-6 font-bold">
                   For over 7 years, Rangoli Dhaba & Restaurant has been serving authentic Indian cuisine
                   that brings the warmth and comfort of home to every meal. Founded by
                   Harsh Bansal, our dhaba continues the tradition of serving
                   wholesome, flavorful food that tells the story of India's rich culinary heritage.
                 </p>
-                <p className="dhaba-hindi text-dhaba-gold-light mb-6 md:mb-8 text-sm sm:text-base">
+                <p className="dhaba-hindi text-dhaba-gold-light mb-6 md:mb-8 text-sm sm:text-base font-Playpen">
                   हमारा उद्देश्य है आपको घर जैसा स्वाद देना और आपके दिल में खुशी भरना।
                 </p>
                 <Button variant="premium" size="lg" asChild className="w-full sm:w-auto">
@@ -389,7 +389,7 @@ const Index = () => {
             {/* Stats Section */}
             <div className="mb-12 md:mb-16">
               <div className="text-center mb-8 md:mb-12">
-                <h2 className="dhaba-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4">
+                <h2 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4 font-kalam">
                   ग्राहक समीक्षा
                 </h2>
                 <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6">
@@ -411,7 +411,7 @@ const Index = () => {
                       <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-dhaba-gold mb-2">
                         {stat.value}
                       </div>
-                      <div className="dhaba-hindi text-dhaba-cream text-xs sm:text-sm mb-1">
+                      <div className="dhaba-hindi text-dhaba-cream text-xs sm:text-sm mb-1 font-Playpen">
                         {stat.label_hindi}
                       </div>
                       <div className="text-dhaba-cream/80 text-xs">
@@ -435,7 +435,7 @@ const Index = () => {
                     />
                     <div className="flex-1">
                       <div className="flex items-center space-x-2 mb-1">
-                        <h4 className="dhaba-hindi font-semibold text-dhaba-cream">
+                        <h4 className="dhaba-hindi font-semibold text-dhaba-cream font-Playpen">
                           {testimonial.name}
                         </h4>
                         {testimonial.verified && (
@@ -458,7 +458,7 @@ const Index = () => {
 
                   <div className="relative mb-4">
 
-                    <p className="dhaba-hindi text-dhaba-cream mb-2 pl-4">
+                    <p className="dhaba-hindi text-dhaba-cream mb-2 pl-4 font-Playpen">
                       {testimonial.review_hindi}
                     </p>
                     <p className="text-dhaba-cream/70 text-sm pl-4 leading-relaxed">
@@ -487,7 +487,7 @@ const Index = () => {
         {/* Call to Action */}
         <section className="py-20 px-1 sm:px-4 relative z-10">
           <div className="container mx-auto text-center">
-            <h2 className="dhaba-heading text-3xl md:text-5xl text-white mb-6">
+            <h2 className="dhaba-heading text-4xl md:text-5xl text-white mb-6 font-kalam">
               आज ही हमसे जुड़ें
             </h2>
             <h3 className="text-2xl text-dhaba-cream font-semibold mb-8">

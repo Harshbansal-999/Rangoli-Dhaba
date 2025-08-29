@@ -110,7 +110,7 @@ const VideoReviewCard = () => {
       <div className="p-[0px] sm:p-6 pb-0 text-center">
         <div className="flex items-center justify-center mb-4 ">
           <div >
-            <h3 className="dhaba-hindi text-lg sm:text-xl font-semibold text-dhaba-cream mb-1 ">
+            <h3 className="dhaba-hindi text-lg sm:text-xl font-semibold text-dhaba-cream mb-1 font-Playpen">
               वीडियो समीक्षा
             </h3>
             <p className="text-dhaba-gold font-medium text-sm sm:text-base">Customer Video Reviews</p>
