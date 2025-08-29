@@ -156,8 +156,8 @@ const Index = () => {
       location: "Jaipur",
       rating: 5,
       date: "5 days ago",
-      review: "Family Dhaba lives up to its name! Feels like eating at home.",
-      review_hindi: "फैमिली ढाबा अपने नाम को सही साबित करता है! घर जैसा महसूस होता है।",
+      review: "Rangoli Dhaba & Restaurant lives up to its name! Feels like eating at home.",
+      review_hindi: "रंगोली ढाबा और रेस्टोरेंट अपने नाम को सही साबित करता है! घर जैसा महसूस होता है।",
       dish: "Mixed Platter",
       avatar: customerVikasImg,
       verified: true
@@ -301,9 +301,9 @@ const Index = () => {
                   Our Story
                 </h3>
                 <p className="text-dhaba-cream/80 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 md:mb-6">
-                  For over 25 years, Family Dhaba has been serving authentic Indian cuisine
+                  For over 7 years, Rangoli Dhaba & Restaurant has been serving authentic Indian cuisine
                   that brings the warmth and comfort of home to every meal. Founded by
-                  Chef Ramesh Kumar, our dhaba continues the tradition of serving
+                  Harsh Bansal, our dhaba continues the tradition of serving
                   wholesome, flavorful food that tells the story of India's rich culinary heritage.
                 </p>
                 <p className="dhaba-hindi text-dhaba-gold-light mb-6 md:mb-8 text-sm sm:text-base">
@@ -396,7 +396,7 @@ const Index = () => {
                   Customer Reviews
                 </h3>
                 <p className="text-dhaba-cream/70 max-w-2xl mx-auto text-sm sm:text-base">
-                  What our valued customers say about their experience at Family Dhaba
+                  What our valued customers say about their experience at Rangoli Dhaba & Restaurant
                 </p>
               </div>
 

@@ -13,32 +13,18 @@ const Footer = () => {
           {/* Restaurant Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img 
+              <img
                 src={Logo}
-                alt="Family Dhaba" 
+                alt="Family Dhaba"
                 className="w-16 h-16 rounded-full"
               />
               <h3 className="dhaba-hindi text-xl font-bold text-dhaba-gold">
-                Rangoli Dhaba
+                Rangoli Dhaba & Restaurant
               </h3>
             </div>
             <p className="text-dhaba-cream/80 text-sm leading-relaxed">
-              Authentic Indian cuisine prepared with love and traditional recipes passed down through generations. Experience the true taste of India at Rangoli Dhaba.
+              Authentic Indian cuisine prepared with love and traditional recipes passed down through generations. Experience the true taste of India at Rangoli Dhaba & Restaurant.
             </p>
-            <div className="flex space-x-3">
-              <Button variant="ghost" size="sm" className="text-dhaba-cream hover:text-dhaba-gold p-2">
-                <Facebook className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="sm" className="text-dhaba-cream hover:text-dhaba-gold p-2">
-                <Instagram className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="sm" className="text-dhaba-cream hover:text-dhaba-gold p-2">
-                <Twitter className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="sm" className="text-dhaba-cream hover:text-dhaba-gold p-2">
-                <Youtube className="w-5 h-5" />
-              </Button>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -109,12 +95,12 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <p className="text-sm text-dhaba-cream/60">
-              © 2024 Rangoli Dhaba. All rights reserved.
+              © 2025 Rangoli Dhaba & Restaurant. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 text-sm text-dhaba-cream/60">
-              <span>Made with ❤️ in India</span>
+              <span>Made with ❤️ in Mathura</span>
               <span>•</span>
-              <span>Authentic Since 1985</span>
+              <span>Authentic Since 2018</span>
             </div>
           </div>
         </div>

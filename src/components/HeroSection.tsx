@@ -118,7 +118,7 @@ const HeroSection = () => {
 
                 {/* Main Title */}
                 <h1 className="dhaba-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dhaba-cream mb-4 drop-shadow-2xl leading-tight">
-                  Rangoli Dhaba
+                  Rangoli Dhaba & Restaurant
                 </h1>
                 <p className="dhaba-hindi text-xl sm:text-2xl lg:text-3xl text-dhaba-gold-light font-medium">
                   स्वाद जो घर की याद दिला दे...

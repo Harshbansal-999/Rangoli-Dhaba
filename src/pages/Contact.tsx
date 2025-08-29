@@ -10,7 +10,8 @@ import {
   Calendar,
   Navigation,
   Star,
-  Send
+  Send,
+  Instagram
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -80,6 +81,12 @@ const Contact = () => {
       text: "WhatsApp",
       color: "bg-green-600",
       link: "https://wa.me/918077814773"
+    },
+    {
+      icon: Instagram,
+      text: "Instagram",
+      color: "bg-red-500",
+      link: "https://www.instagram.com/rangolidhaba?igsh=dTU0azU4YmRma3pv"
     },
     {
       icon: Star,

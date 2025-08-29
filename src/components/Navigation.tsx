@@ -31,7 +31,7 @@ const Navigation = () => {
             />
             <div className="flex flex-col">
               <span className="dhaba-heading text-base sm:text-lg leading-none text-dhaba-cream">
-                Rangoli Dhaba
+                Rangoli Dhaba & Restaurant
               </span>
               <span className="dhaba-hindi text-xs text-dhaba-gold hidden sm:block">
                 स्वाद जो घर की याद दिला दे
