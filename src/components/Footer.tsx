@@ -13,9 +13,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/src/assets/family-dhaba-logo.jpg" 
+                src="/src/assets/rangolilogo.png"
                 alt="Family Dhaba" 
-                className="w-10 h-10 rounded-full"
+                className="w-16 h-16 rounded-full"
               />
               <h3 className="dhaba-hindi text-xl font-bold text-dhaba-gold">
                 Rangoli Dhaba

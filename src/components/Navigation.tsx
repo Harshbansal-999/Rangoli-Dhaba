@@ -22,16 +22,18 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shadow-glow group-hover:scale-110 transition-[var(--transition-bounce)]">
-              <img
-                src={familyDhabaLogo}
-                alt="Family Dhaba Logo"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <img
+              src="/src/assets/rangolilogo.png"
+              alt="Rangoli Dhaba Logo"
+              className="w-12 sm:w-14 h-auto object-contain group-hover:scale-110 transition-[var(--transition-bounce)]"
+            />
             <div className="flex flex-col">
-              <span className="dhaba-heading text-base sm:text-lg leading-none text-dhaba-cream">Rangoli Dhaba</span>
-              <span className="dhaba-hindi text-xs text-dhaba-gold hidden sm:block">स्वाद जो घर की याद दिला दे</span>
+              <span className="dhaba-heading text-base sm:text-lg leading-none text-dhaba-cream">
+                Rangoli Dhaba
+              </span>
+              <span className="dhaba-hindi text-xs text-dhaba-gold hidden sm:block">
+                स्वाद जो घर की याद दिला दे
+              </span>
             </div>
           </Link>
 
