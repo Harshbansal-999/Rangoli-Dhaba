@@ -187,8 +187,9 @@ const Gallery = () => {
                 onClick={() => setFilter(category.id)}
                 className="flex-col h-auto py-2 md:py-3 px-3 md:px-6 bg-dhaba-charcoal/40 border-dhaba-gold/20 text-dhaba-cream hover:bg-dhaba-gold hover:text-dhaba-charcoal text-xs sm:text-sm"
               >
-                <span className="dhaba-hindi text-xs sm:text-sm font-Playpen">{category.name_hindi}</span>
+                
                 <span className="text-xs">{category.name}</span>
+                <span className="dhaba-hindi text-xs sm:text-sm font-Playpen">{category.name_hindi}</span>
               </Button>
             ))}
           </div>
@@ -211,12 +212,13 @@ const Gallery = () => {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dhaba-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-                      <h3 className="dhaba-hindi text-white font-semibold text-base md:text-lg mb-1 font-Playpen">
-                        {image.title_hindi}
-                      </h3>
+                      
                       <p className="text-dhaba-cream/80 text-xs md:text-sm">
                         {image.title}
                       </p>
+                      <h3 className="dhaba-hindi text-white font-semibold text-base md:text-lg mb-1 font-Playpen">
+                        {image.title_hindi}
+                      </h3>
                     </div>
                     
                     <div className="absolute top-3 md:top-4 right-3 md:right-4">

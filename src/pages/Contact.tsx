@@ -234,8 +234,9 @@ const Contact = () => {
                   <div className={`w-16 h-16 ${info.color} bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
                     <Icon className={`w-8 h-8 ${info.color}`} />
                   </div>
-                  <h3 className="dhaba-hindi font-semibold text-lg text-dhaba-cream mb-1 font-Playpen">{info.title}</h3>
-                  <h4 className="font-medium text-dhaba-gold mb-3">{info.title_en}</h4>
+                  
+                  <h3 className="font-medium text-dhaba-gold mb-3">{info.title_en}</h3>
+                  <h4 className="dhaba-hindi font-semibold text-lg text-dhaba-cream mb-1 font-Playpen">{info.title}</h4>
                   <p className="text-dhaba-cream/70 mb-4 leading-relaxed">{info.value}</p>
                   <Button
                     variant="dhaba"

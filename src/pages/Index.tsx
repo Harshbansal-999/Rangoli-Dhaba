@@ -225,12 +225,13 @@ const Index = () => {
                       {dish.price}
                     </div>
                   </div>
-                  <h3 className="dhaba-hindi text-lg md:text-xl font-semibold text-dhaba-cream mb-2">
-                    {dish.title}
-                  </h3>
+                  
                   <h4 className="text-base md:text-lg font-medium text-dhaba-gold mb-3">
                     {dish.title_en}
                   </h4>
+                  <h3 className="dhaba-hindi text-lg md:text-xl font-semibold text-dhaba-cream mb-2">
+                    {dish.title}
+                  </h3>
                   <p className="text-dhaba-cream/70 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                     {dish.description}
                   </p>
@@ -271,12 +272,13 @@ const Index = () => {
                       </div>
                     </div>
                     <div className="px-2">
-                      <h3 className="dhaba-hindi text-base md:text-lg font-semibold text-dhaba-cream mb-2 font-Playpen">
-                        {feature.title_hindi}
-                      </h3>
+                      
                       <h4 className="font-semibold text-dhaba-gold mb-3 text-sm md:text-base">
                         {feature.title}
                       </h4>
+                      <h3 className="dhaba-hindi text-base md:text-lg font-semibold text-dhaba-cream mb-2 font-Playpen">
+                        {feature.title_hindi}
+                      </h3>
                       <p className="text-dhaba-cream/70 text-xs md:text-sm leading-relaxed">
                         {feature.description}
                       </p>
@@ -411,11 +413,12 @@ const Index = () => {
                       <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-dhaba-gold mb-2">
                         {stat.value}
                       </div>
-                      <div className="dhaba-hindi text-dhaba-cream text-xs sm:text-sm mb-1 font-Playpen">
-                        {stat.label_hindi}
-                      </div>
-                      <div className="text-dhaba-cream/80 text-xs">
+                      
+                      <div className="dhaba-hindi text-dhaba-cream text-xs sm:text-sm mb-1">
                         {stat.label}
+                      </div>
+                      <div className="text-dhaba-cream/80 text-xs font-Playpen">
+                        {stat.label_hindi}
                       </div>
                     </div>
                   );
@@ -458,11 +461,12 @@ const Index = () => {
 
                   <div className="relative mb-4">
 
-                    <p className="dhaba-hindi text-dhaba-cream mb-2 pl-4 font-Playpen">
-                      {testimonial.review_hindi}
-                    </p>
-                    <p className="text-dhaba-cream/70 text-sm pl-4 leading-relaxed">
+                    
+                    <p className="dhaba-hindi text-dhaba-cream mb-2 pl-4">
                       {testimonial.review}
+                    </p>
+                    <p className=" text-dhaba-cream/70 text-sm pl-4 leading-relaxed font-Playpen">
+                      {testimonial.review_hindi}
                     </p>
                   </div>
 

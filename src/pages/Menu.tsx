@@ -366,10 +366,11 @@ const Menu = () => {
                     variant={activeCategory === category.name_en ? "dhaba" : "ghost"}
                     size="sm"
                     onClick={() => setActiveCategory(category.name_en)}
-                    className="whitespace-nowrap flex-col h-auto py-2 md:py-3 px-3 md:px-4 min-w-fit text-dhaba-cream hover:text-dhaba-charcoal text-xs md:text-sm"
+                    className="whitespace-nowrap flex-col h-auto py-2 md:py-3 px-3 md:px-4 min-w-fit hover:text-dhaba-charcoal text-xs md:text-sm"
                   >
-                    <span className="dhaba-hindi text-xs md:text-sm font-Playpen">{category.name_hi}</span>
+                    
                     <span className="text-xs">{category.name_en}</span>
+                    <span className="dhaba-hindi text-xs md:text-sm font-Playpen">{category.name_hi}</span>
                   </Button>
                 ))}
               </div>
@@ -406,12 +407,13 @@ const Menu = () => {
                     
                     {/* Content */}
                     <div className="md:col-span-2 text-center md:text-left">
-                      <h2 className="dhaba-heading text-xl sm:text-2xl md:text-3xl text-dhaba-cream mb-2 font-Playpen">
-                        {todaysSpecial.name_hi}
-                      </h2>
+                      
                       <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-3">
                         {todaysSpecial.name_en}
                       </h3>
+                      <h2 className="dhaba-heading text-xl sm:text-2xl md:text-3xl text-dhaba-cream mb-2 font-Playpen">
+                        {todaysSpecial.name_hi}
+                      </h2>
                       <p className="text-dhaba-cream/80 text-sm md:text-base mb-4 leading-relaxed">
                         {todaysSpecial.description}
                       </p>
@@ -484,12 +486,13 @@ const Menu = () => {
                     <div className="flex-1 flex flex-col">
                       {/* Title section */}
                       <div className="mb-2">
-                        <h3 className="dhaba-hindi font-semibold text-base text-dhaba-cream line-clamp-1 font-Playpen py-2">
-                          {item.name_hi}
-                        </h3>
+                        
                         <h4 className="font-medium text-dhaba-gold text-sm line-clamp-1">
                           {item.name_en}
                         </h4>
+                        <h3 className="dhaba-hindi font-semibold text-base text-dhaba-cream line-clamp-1 font-Playpen py-2">
+                          {item.name_hi}
+                        </h3>
                       </div>
                        
                       {/* Description */}
