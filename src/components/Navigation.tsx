@@ -23,7 +23,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
             <img
-              src="/src/assets/rangolilogo.png"
+              src="\src\rangolilogo.png"
               alt="Rangoli Dhaba Logo"
               className="w-12 sm:w-14 h-auto object-contain group-hover:scale-110 transition-[var(--transition-bounce)]"
             />

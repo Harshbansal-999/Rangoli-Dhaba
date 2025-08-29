@@ -269,7 +269,7 @@ const Contact = () => {
                 {/* Map Image */}
                 <div className="h-64 relative">
                   <img
-                    src="\src\assets\Rangolidhava-map.png"
+                    src="\src\Rangolidhava-map.png"
                     alt="Map Preview"
                     className="w-full h-full object-cover"
                   />
