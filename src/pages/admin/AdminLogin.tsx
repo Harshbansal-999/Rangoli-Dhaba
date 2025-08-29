@@ -14,6 +14,18 @@ export const AdminLogin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { toast } = useToast();
+
+  // Check if user is already logged in
+  useState(() => {
+    const checkExistingSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session?.user) {
+        navigate("/admin", { replace: true });
+      }
+    };
+    checkExistingSession();
+  });
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,18 +33,46 @@ export const AdminLogin = () => {
     setError("");
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
+      // Clear any existing session first
+      await supabase.auth.signOut();
+      
+      // Wait a bit to ensure cleanup
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
 
       if (error) {
         setError(error.message);
-      } else {
-        navigate("/admin");
+        toast({
+          title: "Login Failed",
+          description: error.message,
+          variant: "destructive",
+        });
+      } else if (data.user) {
+        // Verify the session is valid
+        const { error: userError } = await supabase.auth.getUser();
+        if (userError) {
+          setError("Session validation failed. Please try again.");
+          return;
+        }
+        
+        toast({
+          title: "Welcome!",
+          description: "Successfully logged in to admin panel.",
+        });
+        navigate("/admin", { replace: true });
       }
     } catch (err) {
-      setError("An unexpected error occurred");
+      const errorMessage = "An unexpected error occurred";
+      setError(errorMessage);
+      toast({
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }

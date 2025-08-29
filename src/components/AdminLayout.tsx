@@ -17,37 +17,90 @@ export const AdminLayout = ({ children }: AdminLayoutProps) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      setLoading(false);
-      if (!session?.user) {
-        navigate("/admin/login");
-      }
-    });
+    let isMounted = true;
+    
+    const initializeAuth = async () => {
+      try {
+        // First check if there's a session
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+        
+        if (sessionError) {
+          console.error("Session error:", sessionError);
+          if (isMounted) {
+            setUser(null);
+            setLoading(false);
+            navigate("/admin/login", { replace: true });
+          }
+          return;
+        }
 
-    // Listen for auth changes
+        if (session?.user) {
+          if (isMounted) {
+            setUser(session.user);
+            setLoading(false);
+          }
+        } else {
+          if (isMounted) {
+            setUser(null);
+            setLoading(false);
+            navigate("/admin/login", { replace: true });
+          }
+        }
+      } catch (error) {
+        console.error("Auth initialization error:", error);
+        if (isMounted) {
+          setUser(null);
+          setLoading(false);
+          navigate("/admin/login", { replace: true });
+        }
+      }
+    };
+
+    // Initialize auth
+    initializeAuth();
+
+    // Set up auth state listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
-        setUser(session?.user ?? null);
-        if (!session?.user && event !== 'INITIAL_SESSION') {
-          navigate("/admin/login");
+        if (!isMounted) return;
+        
+        console.log("Auth state change:", event, session?.user?.email);
+        
+        if (event === 'SIGNED_OUT' || !session?.user) {
+          setUser(null);
+          setLoading(false);
+          navigate("/admin/login", { replace: true });
+        } else if (session?.user) {
+          setUser(session.user);
+          setLoading(false);
         }
       }
     );
 
-    return () => subscription.unsubscribe();
+    return () => {
+      isMounted = false;
+      subscription.unsubscribe();
+    };
   }, [navigate]);
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    navigate("/admin/login");
+    try {
+      setUser(null);
+      await supabase.auth.signOut();
+      navigate("/admin/login", { replace: true });
+    } catch (error) {
+      console.error("Logout error:", error);
+      navigate("/admin/login", { replace: true });
+    }
   };
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-lg">Loading...</div>
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="flex flex-col items-center space-y-4">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+          <div className="text-lg font-medium">Loading admin panel...</div>
+        </div>
       </div>
     );
   }
