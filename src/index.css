@@ -310,7 +310,9 @@
   display: none;                 /* Chrome, Safari, Opera */
 }
 
-
+body{
+  user-select: none;
+}
 
 
 

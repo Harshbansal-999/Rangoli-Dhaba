@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rangoli Dhaba & Restaurant - स्वाद जो घर की याद दिला दे | Authentic Indian Restaurant</title>
-    <meta name="description" content="Experience authentic Indian cuisine at Rangoli Dhaba & Restaurant. Traditional recipes, warm hospitality, and flavors that remind you of home. Order online or visit us for the best dal makhani, tandoor dishes, and thalis in the city." />
-    <meta name="author" content="Rangoli Dhaba & Restaurant" />
 
-    <meta property="og:title" content="Rangoli Dhaba & Restaurant - Authentic Indian Restaurant | स्वाद जो घर की याद दिला दे" />
-    <meta property="og:description" content="Experience authentic Indian cuisine with traditional recipes, warm hospitality, and flavors that remind you of home. Best dal makhani and tandoor dishes in the city." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/public/rangolilogo.png"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rangoli Dhaba & Restaurant - स्वाद जो घर की याद दिला दे | Authentic Indian Restaurant</title>
+  <meta name="description"
+    content="Experience authentic Indian cuisine at Rangoli Dhaba & Restaurant. Traditional recipes, warm hospitality, and flavors that remind you of home. Order online or visit us for the best dal makhani, tandoor dishes, and thalis in the city." />
+  <meta name="author" content="Rangoli Dhaba & Restaurant" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="/public/rangolilogo.png" />
-    <meta name="twitter:image" content="/public/rangolilogo.png" />
+  <meta property="og:title"
+    content="Rangoli Dhaba & Restaurant - Authentic Indian Restaurant | स्वाद जो घर की याद दिला दे" />
+  <meta property="og:description"
+    content="Experience authentic Indian cuisine with traditional recipes, warm hospitality, and flavors that remind you of home. Best dal makhani and tandoor dishes in the city." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/public/rangolilogo.png" />
 
-
-<link rel="icon" href="/public/rangolilogo.png" type="image/png">
-<link rel="apple-touch-icon" href="/public/rangolilogo.png">
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Deva:wght@100..800&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="/public/rangolilogo.png" />
+  <meta name="twitter:image" content="/public/rangolilogo.png" />
 
 
-  </head>
+  <link rel="icon" href="/public/rangolilogo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/public/rangolilogo.png">
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Deva:wght@100..800&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+
+
+  <script>
+    // 🔹 Right-click disable
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+    // 🔹 Shortcut keys disable
+    document.addEventListener("keydown", (e) => {
+      // F12
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S
+      if (
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && (e.key === "U" || e.key === "S"))
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+
 </html>
