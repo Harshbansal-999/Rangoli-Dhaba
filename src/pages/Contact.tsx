@@ -17,6 +17,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import welcome from "@/assets/wellcomee-Photoroom.png";
+import Maps from "@/assets//Rangolidhava-map.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -255,7 +257,7 @@ const Contact = () => {
 
 
               <img
-                src="\src\assets\wellcomee-Photoroom.png"
+                src={welcome}
                 alt="Welcome Character"
                 className="w-full max-w-sm md:max-w-md h-[540px] rounded-xl shadow-lg object-contain"
               />
@@ -269,7 +271,7 @@ const Contact = () => {
                 {/* Map Image */}
                 <div className="h-64 relative">
                   <img
-                    src="\src\Rangolidhava-map.png"
+                    src={Maps}
                     alt="Map Preview"
                     className="w-full h-full object-cover"
                   />

@@ -3,7 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import familyDhabaLogo from "@/assets/family-dhaba-logo.jpg";
+import Logo from "@/assets/rangolilogo.png";
+
+
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +25,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
             <img
-              src="\src\rangolilogo.png"
+              src={Logo}
               alt="Rangoli Dhaba Logo"
               className="w-12 sm:w-14 h-auto object-contain group-hover:scale-110 transition-[var(--transition-bounce)]"
             />

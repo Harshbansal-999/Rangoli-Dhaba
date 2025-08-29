@@ -9,6 +9,8 @@ import spicesCollection from "@/assets/spices-collection.jpg";
 import chefHands from "@/assets/chef-hands.jpg";
 import madeWithLove from "@/assets/made-with-love.jpg";
 
+
+
 const HeroSection = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
