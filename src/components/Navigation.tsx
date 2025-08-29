@@ -19,7 +19,8 @@ const Navigation = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-navbar backdrop-blur-xl border-b border-dhaba-gold/20 shadow-premium">
+    <header className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 bg-transparent backdrop-blur-xl border-b border-dhaba-gold/20 
+             shadow-premium rounded-3xl max-w-[1400px] w-full mx-auto m-2">
       <div className="container mx-auto px-3 sm:px-4">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
