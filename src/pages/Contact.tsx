@@ -92,7 +92,7 @@ const Contact = () => {
       icon: Star,
       text: "Rate Us",
       color: "bg-dhaba-amber",
-      link: "https://maps.app.goo.gl/JGe981pHEQFMjq3L8"
+      link: "https://www.google.com/maps/place/Rangoli+Dhaba+%26+restaurant+best+restaurant+in+mathura/@27.4924635,77.6744058,17z/data=!4m8!3m7!1s0x397371154e0c17cd:0xc430ded306b2b921!8m2!3d27.4924635!4d77.6769807!9m1!1b1!16s%2Fg%2F11c5b0ck24?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
     }
   ];
 

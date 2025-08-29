@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-dhaba-premium-black text-dhaba-cream">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
           {/* Restaurant Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
 
           {/* Legal & Support */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h4 className="text-lg font-semibold text-dhaba-gold">Legal & Support</h4>
             <div className="space-y-2">
               <Link to="/privacy-policy" className="block text-dhaba-cream/80 hover:text-dhaba-gold transition-colors text-sm">
@@ -86,7 +86,7 @@ const Footer = () => {
                 Terms of Service
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
