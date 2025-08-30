@@ -165,12 +165,13 @@ const Gallery = () => {
         <section className="py-8 sm:py-16 md:py-12 px-4 relative overflow-hidden">
           <div className="absolute inset-0 steam-effect spice-particles opacity-30" />
           <div className="container mx-auto text-center relative z-10">
-            <h1 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4 font-kalam">
-              फोटो गैलरी
-            </h1>
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6">
+            
+            <h2 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4  ">
               Photo Gallery
             </h2>
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6 font-kalam">
+              फोटो गैलरी
+            </h1>
             <p className="text-sm sm:text-base lg:text-lg text-dhaba-cream/80 max-w-2xl mx-auto">
               Take a visual journey through our authentic dishes, warm ambience, and memorable moments
             </p>
@@ -188,8 +189,8 @@ const Gallery = () => {
                 className="flex-col h-auto py-2 md:py-3 px-3 md:px-6 bg-dhaba-charcoal/40 border-dhaba-gold/20 text-dhaba-cream hover:bg-dhaba-gold hover:text-dhaba-charcoal text-xs sm:text-sm"
               >
                 
-                <span className="text-xs">{category.name}</span>
-                <span className="dhaba-hindi text-xs sm:text-sm font-Playpen">{category.name_hindi}</span>
+                <span className="dhaba-hindi text-xs sm:text-sm ">{category.name}</span>
+                <span className="text-xs font-Playpen">{category.name_hindi}</span>
               </Button>
             ))}
           </div>
@@ -213,10 +214,10 @@ const Gallery = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-dhaba-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
                       
-                      <p className="text-dhaba-cream/80 text-xs md:text-sm">
+                      <p className="dhaba-hindi text-white font-semibold text-base md:text-lg mb-1 ">
                         {image.title}
                       </p>
-                      <h3 className="dhaba-hindi text-white font-semibold text-base md:text-lg mb-1 font-Playpen">
+                      <h3 className="text-dhaba-cream/80 text-xs md:text-sm font-Playpen">
                         {image.title_hindi}
                       </h3>
                     </div>
@@ -276,27 +277,18 @@ const Gallery = () => {
               
               {/* Image Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dhaba-charcoal/90 to-transparent p-6 rounded-b-lg">
-                <h3 className="dhaba-hindi text-white text-2xl font-semibold mb-2">
-                  {selectedImageData.title_hindi}
-                </h3>
-                <h4 className="text-dhaba-gold text-xl font-medium mb-2">
+              <h4 className="dhaba-hindi text-white text-2xl font-semibold mb-2  ">
                   {selectedImageData.title}
                 </h4>
+                <h3 className="text-dhaba-gold text-xl font-medium mb-2 font-Playpen">
+                  {selectedImageData.title_hindi}
+                </h3>
+                
                 <p className="text-dhaba-cream/80">
                   {selectedImageData.description}
                 </p>
                 
-                {/* Action Buttons */}
-                <div className="flex items-center space-x-3 mt-4">
-                  <Button variant="dhaba" size="sm" className="space-x-2">
-                    <Share2 className="w-4 h-4" />
-                    <span>Share</span>
-                  </Button>
-                  <Button variant="outline" size="sm" className="space-x-2 text-white border-white hover:bg-white hover:text-dhaba-charcoal">
-                    <Download className="w-4 h-4" />
-                    <span>Download</span>
-                  </Button>
-                </div>
+                
               </div>
             </div>
           </div>

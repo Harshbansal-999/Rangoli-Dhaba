@@ -40,9 +40,9 @@ const Contact = () => {
       icon: Phone,
       title: "फोन नंबर",
       title_en: "Phone Number",
-      value: "+91 80778 14773",
+      value: "+91 8859599257",
       action: "Call Now",
-      link: "tel:+918077814773",
+      link: "tel:+918859599257",
       color: "text-dhaba-gold"
     },
     {
@@ -80,7 +80,7 @@ const Contact = () => {
       icon: MessageSquare,
       text: "WhatsApp",
       color: "bg-green-600",
-      link: "https://wa.me/918077814773"
+      link: "https://wa.me/918859599257"
     },
     {
       icon: Instagram,
@@ -181,12 +181,14 @@ const Contact = () => {
         <section className="py-8 sm:py-16 md:py-12 px-4 overflow-hidden relative">
           <div className="absolute inset-0 steam-effect spice-particles opacity-20" />
           <div className="container mx-auto text-center relative z-10">
-            <h1 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4 font-kalam">
-              संपर्क करें
-            </h1>
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6">
+            
+            <h2 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4  ">
               Contact Us
             </h2>
+
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6 font-kalam">
+              संपर्क करें
+            </h1>
             <p className="text-sm sm:text-base lg:text-lg text-dhaba-cream/80 max-w-2xl mx-auto">
               We'd love to hear from you! Get in touch for reservations, feedback, or any questions.
             </p>

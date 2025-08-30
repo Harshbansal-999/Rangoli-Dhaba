@@ -277,12 +277,13 @@ const Menu = () => {
         <section className="py-8 sm:py-16 md:py-12 px-4 relative overflow-hidden">
           <div className="absolute inset-0 spice-particles opacity-20" />
           <div className="container mx-auto text-center relative z-10">
-            <h1 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4 font-kalam">
-              हमारा मेनू
-            </h1>
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6">
+            
+            <h2 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4  ">
               Our Menu
             </h2>
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dhaba-gold font-semibold mb-4 md:mb-6 font-kalam">
+              हमारा मेनू
+            </h1>
             <p className="text-sm sm:text-base lg:text-lg text-dhaba-cream/70 max-w-2xl mx-auto ">
               Authentic flavors from across India, prepared with love and traditional recipes
             </p>
@@ -408,10 +409,10 @@ const Menu = () => {
                     {/* Content */}
                     <div className="md:col-span-2 text-center md:text-left">
                       
-                      <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-3">
+                      <h3 className="dhaba-heading text-xl sm:text-2xl md:text-3xl text-dhaba-cream mb-2 ">
                         {todaysSpecial.name_en}
                       </h3>
-                      <h2 className="dhaba-heading text-xl sm:text-2xl md:text-3xl text-dhaba-cream mb-2 font-Playpen">
+                      <h2 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-3 font-Playpen">
                         {todaysSpecial.name_hi}
                       </h2>
                       <p className="text-dhaba-cream/80 text-sm md:text-base mb-4 leading-relaxed">
@@ -487,10 +488,10 @@ const Menu = () => {
                       {/* Title section */}
                       <div className="mb-2">
                         
-                        <h4 className="font-medium text-dhaba-gold text-sm line-clamp-1">
+                        <h4 className="dhaba-hindi font-semibold text-base text-dhaba-cream line-clamp-1  ">
                           {item.name_en}
                         </h4>
-                        <h3 className="dhaba-hindi font-semibold text-base text-dhaba-cream line-clamp-1 font-Playpen py-2">
+                        <h3 className="font-medium text-dhaba-gold text-sm line-clamp-1 font-Playpen py-2">
                           {item.name_hi}
                         </h3>
                       </div>

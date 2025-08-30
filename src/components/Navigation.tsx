@@ -53,10 +53,11 @@ const Navigation = () => {
                     : "text-dhaba-cream/70 hover:text-dhaba-cream hover:bg-dhaba-charcoal-light/50"
                 )}
               >
-                <span className="dhaba-hindi text-xs lg:text-sm group-hover:scale-110 transition-transform font-Playpen">
+                
+                <span className="dhaba-hindi text-xs lg:text-sm group-hover:scale-110 transition-transform">{item.name_en}</span>
+                <span className="text-xs font-medium  font-Playpen">
                   {item.name}
                 </span>
-                <span className="text-xs font-medium">{item.name_en}</span>
               </Link>
             ))}
           </nav>
@@ -103,8 +104,9 @@ const Navigation = () => {
                   )}
                 >
                   <div className="flex flex-col">
-                    <span className="dhaba-hindi font-medium text-sm sm:text-base">{item.name}</span>
-                    <span className="text-xs sm:text-sm">{item.name_en}</span>
+                    
+                    <span className="dhaba-hindi font-medium text-sm sm:text-base">{item.name_en}</span>
+                    <span className="text-xs sm:text-sm">{item.name}</span>
                   </div>
                 </Link>
               ))}
@@ -115,10 +117,10 @@ const Navigation = () => {
                   <Button
                     variant="dhaba"
                     className="w-full justify-start space-x-2 sm:space-x-3 text-sm sm:text-base"
-                    onClick={() => window.open("tel:+918077814773", "_blank")}
+                    onClick={() => window.open("tel:+918859599257", "_blank")}
                   >
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>कॉल करें - Call Now</span>
+                    <span>Call Now - कॉल करें</span>
                   </Button>
 
                   <Button
@@ -127,7 +129,7 @@ const Navigation = () => {
                     onClick={() => window.open("https://maps.app.goo.gl/EHgGouzUh3uRBoES7", "_blank")}
                   >
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>स्थान - Location</span>
+                    <span>Location - स्थान</span>
                   </Button>
                 </div>
               </div>

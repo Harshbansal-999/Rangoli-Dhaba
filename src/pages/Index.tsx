@@ -200,12 +200,12 @@ const Index = () => {
           <div className="absolute inset-0 spice-particles opacity-10" />
           <div className="container mx-auto relative z-10">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4 font-kalam">
+              
+              <h3 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4  ">
+                Our Signature Dishes
+              </h3><h2 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6 font-kalam">
                 हमारे खास व्यंजन
               </h2>
-              <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6">
-                Our Signature Dishes
-              </h3>
               <p className="text-dhaba-cream/70 max-w-2xl mx-auto text-sm sm:text-base">
                 Discover the authentic taste of India with our most beloved dishes,
                 prepared using traditional methods and finest ingredients.
@@ -226,10 +226,10 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  <h4 className="text-base md:text-lg font-medium text-dhaba-gold mb-3">
+                  <h4 className="dhaba-hindi text-lg md:text-xl font-semibold text-dhaba-cream mb-2  ">
                     {dish.title_en}
                   </h4>
-                  <h3 className="dhaba-hindi text-lg md:text-xl font-semibold text-dhaba-cream mb-2">
+                  <h3 className="text-base md:text-sm font-medium text-dhaba-gold mb-3 font-Playpen">
                     {dish.title}
                   </h3>
                   <p className="text-dhaba-cream/70 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
@@ -248,12 +248,13 @@ const Index = () => {
         <section className="py-4 sm:py-4 md:py-4 px-1 sm:px-4 relative z-10">
           <div className="container mx-auto">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4 font-kalam">
-                हमारी विशेषताएं
-              </h2>
-              <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6">
+              
+              <h3 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4  ">
                 What Makes Us Special
               </h3>
+              <h2 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6 font-kalam">
+                हमारी विशेषताएं
+              </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {features.map((feature, index) => {
@@ -273,10 +274,10 @@ const Index = () => {
                     </div>
                     <div className="px-2">
                       
-                      <h4 className="font-semibold text-dhaba-gold mb-3 text-sm md:text-base">
+                      <h4 className="dhaba-hindi text-base md:text-lg font-semibold text-dhaba-cream mb-2  ">
                         {feature.title}
                       </h4>
-                      <h3 className="dhaba-hindi text-base md:text-lg font-semibold text-dhaba-cream mb-2 font-Playpen">
+                      <h3 className="font-semibold text-dhaba-gold mb-3 text-sm md:text-base font-Playpen">
                         {feature.title_hindi}
                       </h3>
                       <p className="text-dhaba-cream/70 text-xs md:text-sm leading-relaxed">
@@ -296,12 +297,13 @@ const Index = () => {
           <div className="container mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <div className="order-2 lg:order-1">
-                <h2 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl mb-4 md:mb-6 font-kalam">
-                  हमारी कहानी
-                </h2>
-                <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-6 md:mb-8">
+                
+                <h3 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl mb-4 md:mb-6  ">
                   Our Story
                 </h3>
+                <h2 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-6 md:mb-8 font-kalam">
+                  हमारी कहानी
+                </h2>
                 <p className="text-dhaba-cream/80 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 md:mb-6 font-bold">
                   For over 7 years, Rangoli Dhaba & Restaurant has been serving authentic Indian cuisine
                   that brings the warmth and comfort of home to every meal. Founded by
@@ -391,12 +393,13 @@ const Index = () => {
             {/* Stats Section */}
             <div className="mb-12 md:mb-16">
               <div className="text-center mb-8 md:mb-12">
-                <h2 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4 font-kalam">
-                  ग्राहक समीक्षा
-                </h2>
-                <h3 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6">
+                
+                <h3 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4  ">
                   Customer Reviews
                 </h3>
+                <h2 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6 font-kalam">
+                  ग्राहक समीक्षा
+                </h2>
                 <p className="text-dhaba-cream/70 max-w-2xl mx-auto text-sm sm:text-base">
                   What our valued customers say about their experience at Rangoli Dhaba & Restaurant
                 </p>
@@ -439,7 +442,7 @@ const Index = () => {
                     <div className="flex-1">
                       <div className="flex items-center space-x-2 mb-1">
                         <h4 className="dhaba-hindi font-semibold text-dhaba-cream font-Playpen">
-                          {testimonial.name}
+                          {testimonial.name_en}
                         </h4>
                         {testimonial.verified && (
                           <Badge variant="secondary" className="bg-dhaba-gold text-dhaba-charcoal text-xs px-2 py-0">
@@ -448,7 +451,7 @@ const Index = () => {
                         )}
                       </div>
                       <p className="text-sm text-dhaba-cream/60 mb-1">
-                        {testimonial.name_en} • {testimonial.location}
+                        {testimonial.name}  • {testimonial.location}
                       </p>
                       <div className="flex items-center space-x-1">
                         {renderStars(testimonial.rating)}
@@ -491,12 +494,13 @@ const Index = () => {
         {/* Call to Action */}
         <section className="py-20 px-1 sm:px-4 relative z-10">
           <div className="container mx-auto text-center">
-            <h2 className="dhaba-heading text-4xl md:text-5xl text-white mb-6 font-kalam">
-              आज ही हमसे जुड़ें
-            </h2>
-            <h3 className="text-2xl text-dhaba-cream font-semibold mb-8">
+            
+            <h3 className="dhaba-heading text-4xl md:text-5xl text-white mb-6 ">
               Visit Us Today
             </h3>
+            <h2 className="text-2xl text-dhaba-cream font-semibold mb-8 font-kalam">
+              आज ही हमसे जुड़ें
+            </h2>
             <p className="text-dhaba-cream/90 text-lg max-w-2xl mx-auto mb-12">
               Experience the authentic taste of India in a warm, family-friendly atmosphere.
               We're open 7 days a week, ready to serve you with love and tradition.

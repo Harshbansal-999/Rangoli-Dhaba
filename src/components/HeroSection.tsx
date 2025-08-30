@@ -166,15 +166,15 @@ const HeroSection = () => {
 
               {/* Quick Info */}
               <div className="grid grid-cols-3 gap-4">
-                <div className="dhaba-card bg-dhaba-charcoal-light/60 border-dhaba-gold/40 backdrop-blur-md text-center p-4">
+                <div className="dhaba-card bg-dhaba-charcoal-light/60 border-dhaba-gold/40 backdrop-blur-md text-center p-2">
                   <div className="text-dhaba-gold text-xl lg:text-2xl font-bold">25+</div>
                   <div className="text-dhaba-cream text-xs lg:text-sm mt-1">Years Experience</div>
                 </div>
-                <div className="dhaba-card bg-dhaba-charcoal-light/60 border-dhaba-gold/40 backdrop-blur-md text-center p-4">
+                <div className="dhaba-card bg-dhaba-charcoal-light/60 border-dhaba-gold/40 backdrop-blur-md text-center p-2">
                   <div className="text-dhaba-gold text-xl lg:text-2xl font-bold">100+</div>
                   <div className="text-dhaba-cream text-xs lg:text-sm mt-1">Authentic Dishes</div>
                 </div>
-                <div className="dhaba-card bg-dhaba-charcoal-light/60 border-dhaba-gold/40 backdrop-blur-md text-center p-4">
+                <div className="dhaba-card bg-dhaba-charcoal-light/60 border-dhaba-gold/40 backdrop-blur-md text-center p-2">
                   <div className="text-dhaba-gold text-xl lg:text-2xl font-bold">24/7</div>
                   <div className="text-dhaba-cream text-xs lg:text-sm mt-1">Home Delivery</div>
                 </div>
@@ -218,12 +218,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 lg:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-5 h-8 lg:w-6 lg:h-10 border-2 border-dhaba-gold rounded-full flex justify-center">
-          <div className="w-1 h-2 lg:h-3 bg-dhaba-gold rounded-full mt-1 lg:mt-2 animate-pulse" />
-        </div>
-      </div>
+      
     </section>
   );
 };
