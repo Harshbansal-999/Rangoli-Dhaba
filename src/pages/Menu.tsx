@@ -29,19 +29,19 @@ const Menu = () => {
       if (error) throw error;
 
       // Check if "All" category already exists in database
-      const hasAllCategory = data?.some(cat => 
+      const hasAllCategory = data?.some(cat =>
         cat.name_en?.toLowerCase() === "all" ||
         cat.name_hi === "सभी"
       );
 
       // Add "All" category only if it doesn't exist
-      const allCategories = hasAllCategory 
+      const allCategories = hasAllCategory
         ? data || []
         : [
-            { id: "all", name_en: "All", name_hi: "सभी" },
-            ...(data || [])
-          ];
-      
+          { id: "all", name_en: "All", name_hi: "सभी" },
+          ...(data || [])
+        ];
+
       setCategories(allCategories);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -70,9 +70,9 @@ const Menu = () => {
 
       if (error) throw error;
       setDishes(data || []);
-      console.log('Loaded dishes with tags:', data?.map(d => ({ 
-        name: d.name_en, 
-        tags: d.dish_tags?.map(dt => dt.tags?.name) 
+      console.log('Loaded dishes with tags:', data?.map(d => ({
+        name: d.name_en,
+        tags: d.dish_tags?.map(dt => dt.tags?.name)
       })));
     } catch (error) {
       console.error('Error fetching dishes:', error);
@@ -86,7 +86,7 @@ const Menu = () => {
     }
   };
 
-  
+
   // Fetch tags from database
   const fetchTags = async () => {
     try {
@@ -96,7 +96,7 @@ const Menu = () => {
         .order('name', { ascending: true });
 
       if (error) throw error;
-      
+
       // Add "All" option at the beginning
       const allTags = [
         { id: "all", name: "All", color: "#10b981" },
@@ -233,14 +233,14 @@ const Menu = () => {
 
   // Check if dish has veg tag
   const isVegetarian = (dish: any) => {
-    return dish.dish_tags?.some((dt: any) => 
+    return dish.dish_tags?.some((dt: any) =>
       dt.tags?.name?.toLowerCase() === 'veg'
     ) || false;
   };
 
   // Check if dish has spicy tag
   const isSpicy = (dish: any) => {
-    return dish.dish_tags?.some((dt: any) => 
+    return dish.dish_tags?.some((dt: any) =>
       dt.tags?.name?.toLowerCase() === 'spicy'
     ) || false;
   };
@@ -248,36 +248,36 @@ const Menu = () => {
   const filteredItems = dishes.filter(item => {
     const categoryName = item.categories?.name_en;
     const matchesCategory = activeCategory === "All" || categoryName === activeCategory;
-    
+
     // Check if item matches the selected tag filter
-    const matchesFilter = activeFilter === "all" || 
+    const matchesFilter = activeFilter === "all" ||
       item.dish_tags?.some((dt: any) => dt.tags?.name?.toLowerCase() === activeFilter.toLowerCase());
-    
-    const matchesSearch = 
+
+    const matchesSearch =
       item.name_hi?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.name_en?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.description?.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     return matchesCategory && matchesFilter && matchesSearch;
   });
 
   const todaysSpecial = dishes.find(item => item.is_special);
 
   return (
-    <div 
+    <div
       className="min-h-screen pt-16 bg-cover bg-center bg-fixed relative"
       style={{ backgroundImage: 'url(/lovable-uploads/b614fee2-e099-4a31-a9ad-8c81cea09204.png)' }}
     >
       {/* Dark overlay for readability - reduced opacity and blur */}
       <div className="absolute inset-0 bg-dhaba-premium-black/70 backdrop-blur-[1px]"></div>
-      
+
       {/* All content wrapper with relative positioning */}
       <div className="relative z-10">
         {/* Header */}
         <section className="py-8 sm:py-16 md:py-12 px-4 relative overflow-hidden">
           <div className="absolute inset-0 spice-particles opacity-20" />
           <div className="container mx-auto text-center relative z-10">
-            
+
             <h2 className="dhaba-heading text-5xl sm:text-5xl md:text-5xl lg:text-6xl text-dhaba-cream mb-4  ">
               Our Menu
             </h2>
@@ -299,9 +299,9 @@ const Menu = () => {
                   <div
                     key={offer.id}
                     className="relative flex-shrink-0 w-96 md:w-[450px] cursor-pointer hover:scale-105 transition-transform duration-300"
-                    onClick={() => setSelectedImage({ 
-                      url: offer.image_url, 
-                      alt: offer.title 
+                    onClick={() => setSelectedImage({
+                      url: offer.image_url,
+                      alt: offer.title
                     })}
                   >
                     <img
@@ -325,9 +325,9 @@ const Menu = () => {
               </div>
             </div>
             {/* 👉 HINT TEXT */}
-    <p className="text-center text-l text-dhaba-cream/100 mt-2 animate-pulse">
-      → Swipe to view more
-    </p>
+            <p className="text-center text-l text-dhaba-cream/100 mt-2 animate-pulse">
+              → Swipe to view more
+            </p>
           </div>
         )}
 
@@ -369,7 +369,7 @@ const Menu = () => {
                     onClick={() => setActiveCategory(category.name_en)}
                     className="whitespace-nowrap flex-col h-auto py-2 md:py-3 px-3 md:px-4 min-w-fit hover:text-dhaba-charcoal text-xs md:text-sm"
                   >
-                    
+
                     <span className="text-xs">{category.name_en}</span>
                     <span className="dhaba-hindi text-xs md:text-sm font-Playpen">{category.name_hi}</span>
                   </Button>
@@ -391,7 +391,7 @@ const Menu = () => {
                       आज का स्पेशल
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-center">
                     {/* Image */}
                     <div className="md:col-span-1">
@@ -399,16 +399,16 @@ const Menu = () => {
                         src={todaysSpecial.image_url || '/placeholder.svg'}
                         alt={todaysSpecial.name_en}
                         className="w-full h-48 md:h-56 object-cover rounded-lg shadow-warm cursor-pointer hover:opacity-90 transition-opacity"
-                        onClick={() => setSelectedImage({ 
-                          url: todaysSpecial.image_url || '/placeholder.svg', 
-                          alt: todaysSpecial.name_en 
+                        onClick={() => setSelectedImage({
+                          url: todaysSpecial.image_url || '/placeholder.svg',
+                          alt: todaysSpecial.name_en
                         })}
                       />
                     </div>
-                    
+
                     {/* Content */}
                     <div className="md:col-span-2 text-center md:text-left">
-                      
+
                       <h3 className="dhaba-heading text-xl sm:text-2xl md:text-3xl text-dhaba-cream mb-2 ">
                         {todaysSpecial.name_en}
                       </h3>
@@ -418,7 +418,7 @@ const Menu = () => {
                       <p className="text-dhaba-cream/80 text-sm md:text-base mb-4 leading-relaxed">
                         {todaysSpecial.description}
                       </p>
-                      
+
                       {/* Rating and Tags */}
                       <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
                         <div className="flex items-center space-x-1">
@@ -438,7 +438,7 @@ const Menu = () => {
                           </Badge>
                         )}
                       </div>
-                      
+
                       <div className="flex items-center justify-center md:justify-start space-x-4">
                         {/* Price */}
                         <div className="text-2xl sm:text-3xl font-bold text-dhaba-gold">
@@ -458,22 +458,22 @@ const Menu = () => {
               <p className="text-dhaba-cream/70">Loading dishes...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-6xl mx-auto justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-6xl mx-auto justify-items-center">
               {filteredItems.map(item => {
                 const isVeg = isVegetarian(item);
                 const isSpicyDish = isSpicy(item);
-                
+
                 return (
                   <div key={item.id} className="menu-item group overflow-hidden dhaba-card bg-dhaba-charcoal/20 border-dhaba-gold/30 backdrop-blur-lg hover:bg-dhaba-charcoal/30 hover:border-dhaba-gold/60 transition-all duration-300 h-full flex flex-col w-full max-w-[280px]">
                     {/* Item Image */}
-                    <div className="relative mb-3">
+                    <div className="relative mb-3 flex justify-center items-center w-full h-40 sm:h-44 overflow-hidden rounded-xl">
                       <img
                         src={item.image_url || '/placeholder.svg'}
                         alt={item.name_en}
-                        className="w-full h-40 sm:h-44 object-cover rounded-lg shadow-warm group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-                        onClick={() => setSelectedImage({ 
-                          url: item.image_url || '/placeholder.svg', 
-                          alt: item.name_en 
+                        className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 cursor-pointer"
+                        onClick={() => setSelectedImage({
+                          url: item.image_url || '/placeholder.svg',
+                          alt: item.name_en
                         })}
                       />
                       {item.is_special && (
@@ -483,29 +483,30 @@ const Menu = () => {
                       )}
                     </div>
 
+
                     {/* Content section with flex-grow */}
                     <div className="flex-1 flex flex-col">
                       {/* Title section */}
                       <div className="mb-2">
-                        
+
                         <h4 className="dhaba-hindi font-semibold text-base text-dhaba-cream line-clamp-1  ">
                           {item.name_en}
                         </h4>
-                        <h3 className="font-medium text-dhaba-gold text-sm line-clamp-1 font-Playpen py-2">
+                        <h3 className="font-medium text-dhaba-gold text-sm line-clamp-1 font-Playpen py-2 pb-4">
                           {item.name_hi}
                         </h3>
                       </div>
-                       
+
                       {/* Description */}
                       <p className="text-xs text-dhaba-cream/70 mb-3 line-clamp-2 flex-grow">
                         {item.description}
                       </p>
-                       
+
                       {/* Price section */}
                       <div className="text-lg font-bold text-dhaba-gold mb-3">
                         ₹{item.price}
                       </div>
-                      
+
                       {/* Bottom section with rating, tags, and button */}
                       <div className="mt-auto">
                         {/* Rating and tags row - center aligned */}
@@ -514,14 +515,14 @@ const Menu = () => {
                             <Star className="w-3 h-3 fill-dhaba-gold text-dhaba-gold" />
                             <span className="text-xs font-medium text-dhaba-cream">{item.rating}</span>
                           </div>
-                          
+
                           {/* Tags */}
                           {item.dish_tags?.map((dt: any, index: number) => (
-                            <Badge 
-                              key={index} 
-                              variant="secondary" 
+                            <Badge
+                              key={index}
+                              variant="secondary"
                               className="text-xs px-2 py-0.5"
-                              style={{ 
+                              style={{
                                 backgroundColor: dt.tags.color || '#10b981',
                                 color: '#ffffff'
                               }}
@@ -529,7 +530,7 @@ const Menu = () => {
                               {dt.tags.name}
                             </Badge>
                           ))}
-                          
+
                           {/* Spicy indicator */}
                           {isSpicyDish && (
                             <Flame className="w-3 h-3 text-dhaba-spice-red" />
@@ -552,36 +553,36 @@ const Menu = () => {
           )}
         </div>
 
-       {/* Image Modal */}
-       {selectedImage && (
-  <div 
-    className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
-    onClick={() => setSelectedImage(null)}
-  >
-    {/* Container ko responsive max-width/height do */}
-    <div className="relative w-full max-h-[85vh] sm:max-h-[90vh]">
-      <button
-        onClick={() => setSelectedImage(null)}
-        className="absolute -top-8 sm:-top-12 right-0 text-white hover:text-dhaba-gold transition-colors z-10 p-1"
-      >
-        <X className="w-6 h-6 sm:w-8 sm:h-8" />
-      </button>
+        {/* Image Modal */}
+        {selectedImage && (
+          <div
+            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            {/* Container ko responsive max-width/height do */}
+            <div className="relative w-full max-h-[85vh] sm:max-h-[90vh]">
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-8 sm:-top-12 right-0 text-white hover:text-dhaba-gold transition-colors z-10 p-1"
+              >
+                <X className="w-6 h-6 sm:w-8 sm:h-8" />
+              </button>
 
-      {/* Image: responsive chhota + center + object-contain */}
-      <img
-        src={selectedImage.url}
-        alt={selectedImage.alt}
-        className="
+              {/* Image: responsive chhota + center + object-contain */}
+              <img
+                src={selectedImage.url}
+                alt={selectedImage.alt}
+                className="
           block mx-auto rounded-lg object-contain
           max-w-[85vw] sm:max-w-[75vw] md:max-w-[65vw] lg:max-w-[55vw] xl:max-w-[45vw]
           max-h-[70vh] sm:max-h-[75vh] md:max-h-[80vh]
           shadow-2xl
         "
-        onClick={(e) => e.stopPropagation()}
-      />
-    </div>
-  </div>
-)}
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          </div>
+        )}
 
       </div>
     </div>
