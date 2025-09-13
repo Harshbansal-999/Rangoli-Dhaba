@@ -266,7 +266,7 @@ const Menu = () => {
   return (
     <div
       className="min-h-screen pt-16 bg-cover bg-center bg-fixed relative"
-      style={{ backgroundImage: 'url(/lovable-uploads/b614fee2-e099-4a31-a9ad-8c81cea09204.png)' }}
+      style={{ backgroundImage: 'url(/lovable-uploads/dhaba.jpg)' }}
     >
       {/* Dark overlay for readability - reduced opacity and blur */}
       <div className="absolute inset-0 bg-dhaba-premium-black/70 backdrop-blur-[1px]"></div>

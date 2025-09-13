@@ -197,52 +197,68 @@ const Index = () => {
 
         {/* Signature Dishes */}
         <section className="py-12 sm:py-16 md:py-20 px-1 sm:px-4 relative z-10 overflow-hidden">
-          <div className="absolute inset-0 spice-particles opacity-10" />
-          <div className="container mx-auto relative z-10">
-            <div className="text-center mb-12 md:mb-16">
-              
-              <h3 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4  ">
-                Our Signature Dishes
-              </h3><h2 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6 font-kalam">
-                हमारे खास व्यंजन
-              </h2>
-              <p className="text-dhaba-cream/70 max-w-2xl mx-auto text-sm sm:text-base">
-                Discover the authentic taste of India with our most beloved dishes,
-                prepared using traditional methods and finest ingredients.
-              </p>
-            </div>
+  <div className="absolute inset-0 spice-particles opacity-10" />
+  <div className="container mx-auto relative z-10">
+    <div className="text-center mb-12 md:mb-16">
+      <h3 className="dhaba-heading text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-dhaba-cream mb-4">
+        Our Signature Dishes
+      </h3>
+      <h2 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-4 md:mb-6 font-kalam">
+        हमारे खास व्यंजन
+      </h2>
+      <p className="text-dhaba-cream/70 max-w-2xl mx-auto text-sm sm:text-base">
+        Discover the authentic taste of India with our most beloved dishes,
+        prepared using traditional methods and finest ingredients.
+      </p>
+    </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {highlights.map((dish, index) => (
-                <div key={index} className="dhaba-card group overflow-hidden">
-                  <div className="relative mb-4 md:mb-6">
-                    <img
-                      src={dish.image}
-                      alt={dish.title_en}
-                      className="w-full h-40 sm:h-48 md:h-52 object-cover rounded-lg shadow-card group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-3 md:top-4 right-3 md:right-4 bg-dhaba-gold text-dhaba-charcoal px-2 md:px-3 py-1 rounded-full font-semibold shadow-glow text-sm md:text-base">
-                      {dish.price}
-                    </div>
-                  </div>
-                  
-                  <h4 className="dhaba-hindi text-lg md:text-xl font-semibold text-dhaba-cream mb-2  ">
-                    {dish.title_en}
-                  </h4>
-                  <h3 className="text-base md:text-sm font-medium text-dhaba-gold mb-3 font-Playpen">
-                    {dish.title}
-                  </h3>
-                  <p className="text-dhaba-cream/70 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
-                    {dish.description}
-                  </p>
-                  <Button variant="dhaba" className="w-full">
-                    Order Now
-                  </Button>
-                </div>
-              ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {highlights.map((dish, index) => (
+        <div
+          key={index}
+          className="bg-dhaba-charcoal/20 border border-dhaba-gold/40 rounded-xl overflow-hidden 
+                     shadow-lg backdrop-blur-lg hover:scale-[1.02] transition-transform duration-300"
+        >
+          {/* Image */}
+          <div className="relative">
+            <img
+              src={dish.image}
+              alt={dish.title_en}
+              className="w-full h-48 sm:h-52 md:h-56 object-cover"
+            />
+          </div>
+
+          {/* Content (Black overlay box) */}
+          <div className="bg-black/70 p-4 sm:p-5 flex flex-col gap-2">
+            <h4 className="text-lg md:text-xl font-semibold text-white">
+              {dish.title_en}
+            </h4>
+            <h3 className="text-base font-medium text-dhaba-gold font-kalam">
+              {dish.title}
+            </h3>
+            <p className="text-dhaba-cream/70 text-sm">{dish.description}</p>
+
+            {/* Price */}
+            <p className="text-dhaba-gold font-semibold text-lg mt-2">
+              {dish.price}
+            </p>
+
+            {/* Rating + Veg */}
+            <div className="flex items-center justify-between mt-2">
+              <div className="flex items-center gap-1 text-yellow-400 text-sm">
+                <span>4.5⭐</span>
+              </div>
+              <span className="bg-green-600 text-white text-xs px-2 py-1 rounded-full">
+                Veg
+              </span>
             </div>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         {/* Features */}
         <section className="py-4 sm:py-4 md:py-4 px-1 sm:px-4 relative z-10">
