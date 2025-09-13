@@ -380,76 +380,88 @@ const Menu = () => {
 
           {/* Today's Special Card */}
           {todaysSpecial && (
-            <div className="mb-6 md:mb-8">
-              <div className="bg-gradient-to-r from-dhaba-gold/20 to-dhaba-amber/20 rounded-lg p-1">
-                <div className="bg-dhaba-charcoal/80 backdrop-blur-md rounded-lg p-4 md:p-6">
-                  <div className="flex items-center mb-3">
-                    <div className="bg-dhaba-gold text-dhaba-charcoal px-3 py-1 rounded-full text-xs md:text-sm font-bold mr-2">
-                      Today's Special
-                    </div>
-                    <div className="bg-dhaba-gold text-dhaba-charcoal px-2 py-1 rounded-full text-xs font-medium font-Playpen">
-                      आज का स्पेशल
-                    </div>
-                  </div>
+            <div className="mb-8">
+  <div className="relative bg-gradient-to-r from-yellow-500/20 via-dhaba-gold/20 to-amber-600/20 rounded-2xl p-[2px] shadow-xl">
+    <div className="bg-dhaba-charcoal/90 backdrop-blur-md rounded-2xl p-5 md:p-8 relative overflow-hidden">
+      
+      {/* Glow Effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-dhaba-gold/10 to-transparent opacity-20"></div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-center">
-                    {/* Image */}
-                    <div className="md:col-span-1">
-                      <img
-                        src={todaysSpecial.image_url || '/placeholder.svg'}
-                        alt={todaysSpecial.name_en}
-                        className="w-full h-48 md:h-56 object-cover rounded-lg shadow-warm cursor-pointer hover:opacity-90 transition-opacity"
-                        onClick={() => setSelectedImage({
-                          url: todaysSpecial.image_url || '/placeholder.svg',
-                          alt: todaysSpecial.name_en
-                        })}
-                      />
-                    </div>
+      {/* Badges Top */}
+      <div className="flex items-center mb-4 space-x-2">
+        <div className="bg-gradient-to-r from-yellow-400 to-amber-500 text-black px-4 py-1.5 rounded-full text-xs md:text-sm font-bold shadow-md">
+          ⭐ Today’s Special
+        </div>
+        <div className="bg-dhaba-gold text-dhaba-charcoal px-3 py-1 rounded-full text-xs md:text-sm font-semibold font-Playpen shadow">
+          आज का स्पेशल
+        </div>
+      </div>
 
-                    {/* Content */}
-                    <div className="md:col-span-2 text-center md:text-left">
+      {/* Grid Content */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        
+        {/* Image Section */}
+        <div className="relative md:col-span-1">
+          <img
+            src={todaysSpecial.image_url || '/placeholder.svg'}
+            alt={todaysSpecial.name_en}
+            className="w-full h-52 md:h-60 object-cover rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105 cursor-pointer"
+            onClick={() =>
+              setSelectedImage({
+                url: todaysSpecial.image_url || '/placeholder.svg',
+                alt: todaysSpecial.name_en
+              })
+            }
+          />
+          <span className="absolute top-3 left-3 bg-red-600 text-white text-xs px-3 py-1 rounded-full shadow-md">
+            Limited Offer
+          </span>
+        </div>
 
-                      <h3 className="dhaba-heading text-xl sm:text-2xl md:text-3xl text-dhaba-cream mb-2 ">
-                        {todaysSpecial.name_en}
-                      </h3>
-                      <h2 className="text-lg sm:text-xl md:text-2xl text-dhaba-gold font-semibold mb-3 font-Playpen">
-                        {todaysSpecial.name_hi}
-                      </h2>
-                      <p className="text-dhaba-cream/80 text-sm md:text-base mb-4 leading-relaxed">
-                        {todaysSpecial.description}
-                      </p>
+        {/* Text + Details */}
+        <div className="md:col-span-2 text-center md:text-left">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-dhaba-cream mb-2">
+            {todaysSpecial.name_en}
+          </h3>
+          <h2 className="text-xl sm:text-2xl md:text-3xl text-dhaba-gold font-bold mb-4 font-Playpen">
+            {todaysSpecial.name_hi}
+          </h2>
+          <p className="text-dhaba-cream/80 text-sm md:text-base mb-5 leading-relaxed max-w-2xl">
+            {todaysSpecial.description}
+          </p>
 
-                      {/* Rating and Tags */}
-                      <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
-                        <div className="flex items-center space-x-1">
-                          <Star className="w-4 h-4 fill-dhaba-gold text-dhaba-gold" />
-                          <span className="font-semibold text-dhaba-cream text-sm">{todaysSpecial.rating}</span>
-                        </div>
-                        {isVegetarian(todaysSpecial) && (
-                          <Badge className="bg-dhaba-gold text-dhaba-charcoal text-xs">
-                            <Leaf className="w-3 h-3 mr-1" />
-                            Veg
-                          </Badge>
-                        )}
-                        {isSpicy(todaysSpecial) && (
-                          <Badge className="bg-dhaba-spice-red text-white text-xs">
-                            <Flame className="w-3 h-3 mr-1" />
-                            Spicy
-                          </Badge>
-                        )}
-                      </div>
-
-                      <div className="flex items-center justify-center md:justify-start space-x-4">
-                        {/* Price */}
-                        <div className="text-2xl sm:text-3xl font-bold text-dhaba-gold">
-                          ₹{todaysSpecial.price}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          {/* Rating + Tags */}
+          <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
+            <div className="flex items-center space-x-1">
+              <Star className="w-5 h-5 fill-dhaba-gold text-dhaba-gold" />
+              <span className="font-semibold text-dhaba-cream text-sm">
+                {todaysSpecial.rating}
+              </span>
             </div>
+
+            {isVegetarian(todaysSpecial) && (
+              <span className="flex items-center bg-green-600 text-white text-xs px-3 py-1 rounded-full shadow-md">
+                <Leaf className="w-3 h-3 mr-1" /> Veg
+              </span>
+            )}
+
+            {isSpicy(todaysSpecial) && (
+              <span className="flex items-center bg-red-500 text-white text-xs px-3 py-1 rounded-full shadow-md">
+                <Flame className="w-3 h-3 mr-1" /> Spicy
+              </span>
+            )}
+          </div>
+
+          {/* Price */}
+          <div className="text-3xl sm:text-4xl font-extrabold text-dhaba-gold">
+            ₹{todaysSpecial.price}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
           )}
 
           {/* Menu Items Grid */}
@@ -458,83 +470,81 @@ const Menu = () => {
               <p className="text-dhaba-cream/70">Loading dishes...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-6xl mx-auto justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-6 max-w-7xl mx-auto justify-items-center p-4">
               {filteredItems.map(item => {
                 const isVeg = isVegetarian(item);
                 const isSpicyDish = isSpicy(item);
 
                 return (
-                  <div key={item.id} className="menu-item group overflow-hidden dhaba-card bg-dhaba-charcoal/20 border-dhaba-gold/30 backdrop-blur-lg hover:bg-dhaba-charcoal/30 hover:border-dhaba-gold/60 transition-all duration-300 h-full flex flex-col w-full max-w-[280px]">
-                    {/* Item Image */}
-                    <div className="relative mb-3 flex justify-center items-center w-full h-40 sm:h-44 overflow-hidden rounded-xl">
+                  <div
+                    key={item.id}
+                    className="group relative bg-gradient-to-br from-dhaba-charcoal/70 to-black/80 border border-dhaba-gold/40 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 w-full max-w-[280px] flex flex-col"
+                  >
+                    {/* Image */}
+                    <div className="relative w-full h-44 overflow-hidden">
                       <img
                         src={item.image_url || '/placeholder.svg'}
                         alt={item.name_en}
-                        className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 cursor-pointer"
-                        onClick={() => setSelectedImage({
-                          url: item.image_url || '/placeholder.svg',
-                          alt: item.name_en
-                        })}
+                        className="w-full h-full object-cover rounded-t-2xl transition-transform duration-300 group-hover:scale-110"
+                        onClick={() =>
+                          setSelectedImage({
+                            url: item.image_url || '/placeholder.svg',
+                            alt: item.name_en
+                          })
+                        }
                       />
                       {item.is_special && (
-                        <div className="absolute top-2 left-2 bg-dhaba-spice-red text-white px-2 py-1 rounded-full text-xs font-bold">
-                          Special
-                        </div>
+                        <span className="absolute top-2 left-2 bg-gradient-to-r from-yellow-400 to-red-500 text-black font-bold text-xs px-3 py-1 rounded-full shadow-md">
+                          ⭐ Special
+                        </span>
                       )}
                     </div>
 
-
-                    {/* Content section with flex-grow */}
-                    <div className="flex-1 flex flex-col">
-                      {/* Title section */}
-                      <div className="mb-2">
-
-                        <h4 className="dhaba-hindi font-semibold text-base text-dhaba-cream line-clamp-1  ">
-                          {item.name_en}
-                        </h4>
-                        <h3 className="font-medium text-dhaba-gold text-sm line-clamp-1 font-Playpen py-2 pb-4">
-                          {item.name_hi}
-                        </h3>
-                      </div>
+                    {/* Content */}
+                    <div className="flex flex-col flex-1 p-4">
+                      {/* Titles */}
+                      <h4 className="text-lg font-bold text-dhaba-cream mb-1 truncate">
+                        {item.name_en}
+                      </h4>
+                      <h3 className="text-sm font-medium text-dhaba-gold mb-2 truncate font-Playpen pt-1">
+                        {item.name_hi}
+                      </h3>
 
                       {/* Description */}
-                      <p className="text-xs text-dhaba-cream/70 mb-3 line-clamp-2 flex-grow">
+                      <p className="text-xs text-dhaba-cream/70 mb-3 line-clamp-2">
                         {item.description}
                       </p>
 
-                      {/* Price section */}
-                      <div className="text-lg font-bold text-dhaba-gold mb-3">
+                      {/* Price */}
+                      <div className="text-xl font-extrabold text-dhaba-gold mb-4">
                         ₹{item.price}
                       </div>
 
-                      {/* Bottom section with rating, tags, and button */}
-                      <div className="mt-auto">
-                        {/* Rating and tags row - center aligned */}
-                        <div className="flex items-center justify-center flex-wrap gap-1 mb-3">
-                          <div className="flex items-center space-x-1">
-                            <Star className="w-3 h-3 fill-dhaba-gold text-dhaba-gold" />
-                            <span className="text-xs font-medium text-dhaba-cream">{item.rating}</span>
-                          </div>
+                      {/* Bottom section */}
+                      <div className="flex items-center justify-between mt-auto">
+                        {/* Rating */}
+                        <div className="flex items-center space-x-1">
+                          <Star className="w-4 h-4 fill-dhaba-gold text-dhaba-gold" />
+                          <span className="text-sm text-dhaba-cream font-medium">
+                            {item.rating}
+                          </span>
+                        </div>
 
-                          {/* Tags */}
+                        {/* Tags */}
+                        <div className="flex items-center gap-2">
                           {item.dish_tags?.map((dt: any, index: number) => (
-                            <Badge
+                            <span
                               key={index}
-                              variant="secondary"
-                              className="text-xs px-2 py-0.5"
+                              className="text-[10px] px-2 py-1 rounded-full shadow-md"
                               style={{
                                 backgroundColor: dt.tags.color || '#10b981',
-                                color: '#ffffff'
+                                color: '#fff'
                               }}
                             >
                               {dt.tags.name}
-                            </Badge>
+                            </span>
                           ))}
-
-                          {/* Spicy indicator */}
-                          {isSpicyDish && (
-                            <Flame className="w-3 h-3 text-dhaba-spice-red" />
-                          )}
+                          {isSpicyDish && <Flame className="w-4 h-4 text-dhaba-spice-red" />}
                         </div>
                       </div>
                     </div>
@@ -542,6 +552,7 @@ const Menu = () => {
                 );
               })}
             </div>
+
           )}
 
           {!loading && filteredItems.length === 0 && (
