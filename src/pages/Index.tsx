@@ -41,6 +41,15 @@ import chefHandsImg from "@/assets/chef-hands.jpg";
 import happyCustomersImg from "@/assets/happy-customers.jpg";
 import spicesBackgroundImg from "@/assets/spices-background.jpg";
 import VideoReviewCard from "@/components/VideoReviewCard";
+import rangoli1 from "@/assets/rngoli1.jpg";
+import rangoli2 from "@/assets/rngoli2.jpg";
+import rangoli3 from "@/assets/rngoli3.jpg";
+import rangoli4 from "@/assets/rngoli4.jpg";
+import rangoli5 from "@/assets/rngoli5.jpg";
+import rangoli6 from "@/assets/rngoli6.jpg";
+import dalm from "@/assets/dalmakhni.jpg";
+import troti from "@/assets/tndooriroti.jpg";
+import rthali from "@/assets/rajsthanithali.jpg";
 
 
 const Index = () => {
@@ -50,21 +59,21 @@ const Index = () => {
       title: "स्वादिष्ट दाल मखनी",
       title_en: "Signature Dal Makhani",
       description: "Slow-cooked black lentils in rich creamy gravy",
-      image: dalMakhaniImg,
+      image: dalm,
       price: "₹280"
     },
     {
       title: "तंदूरी रोटी",
       title_en: "Fresh Tandoor Roti",
       description: "Hand-rolled bread baked fresh in our clay oven",
-      image: tandoorRotiImg,
+      image: troti,
       price: "₹25"
     },
     {
       title: "राजस्थानी थाली",
       title_en: "Royal Rajasthani Thali",
       description: "Complete meal with dal, sabzi, roti & Delicious sweets",
-      image: rajasthaniThaliImg,
+      image: rthali,
       price: "₹420"
     }
   ];
@@ -101,12 +110,12 @@ const Index = () => {
   ];
 
   const storyGallery = [
-    { image: dhabaExteriorImg, title: "Our Heritage", size: "large" },
-    { image: familyCookingImg, title: "Family Tradition", size: "tall" },
-    { image: spicesCollectionImg, title: "Fresh Spices", size: "small" },
-    { image: tandoorCookingImg, title: "Traditional Cooking", size: "medium" },
-    { image: chefHandsImg, title: "Skilled Hands", size: "small" },
-    { image: happyCustomersImg, title: "Happy Faces", size: "medium" }
+    { image: rangoli1, title: "Our Heritage", size: "large" },
+    { image: rangoli2, title: "Family Tradition", size: "tall" },
+    { image: rangoli3, title: "Fresh Spices", size: "small" },
+    { image: rangoli4, title: "Traditional Cooking", size: "medium" },
+    { image: rangoli5, title: "Skilled Hands", size: "small" },
+    { image: rangoli6, title: "Happy Faces", size: "medium" }
   ];
 
   const testimonials = [
@@ -499,11 +508,11 @@ const Index = () => {
             </div>
 
             {/* Video Review Card - Centered and Full Width */}
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <div className="w-full max-w-4xl">
                 <VideoReviewCard />
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 

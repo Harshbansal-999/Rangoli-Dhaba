@@ -4,10 +4,7 @@ import { Phone, MapPin, Calendar, Star, ChefHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBackgroundImage from "@/assets/hero-background.jpg";
 import heroFoodImage from "@/assets/hero-food-image.jpg";
-import tandoorCooking from "@/assets/tandoor-cooking.jpg";
-import spicesCollection from "@/assets/spices-collection.jpg";
-import chefHands from "@/assets/chef-hands.jpg";
-import madeWithLove from "@/assets/made-with-love.jpg";
+import rngolihero from "@/assets/rngolidhabahero.jpg";
 
 
 
@@ -20,11 +17,7 @@ const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const slideshowImages = [
-    heroFoodImage,
-    tandoorCooking,
-    spicesCollection,
-    chefHands,
-    madeWithLove
+    rngolihero,
   ];
 
   useEffect(() => {

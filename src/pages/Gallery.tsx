@@ -10,7 +10,7 @@ import familyDiningImg from "@/assets/family-dining.jpg";
 import butterChickenImg from "@/assets/butter-chicken.jpg";
 import weddingCateringImg from "@/assets/wedding-catering.jpg";
 import spicesCollectionImg from "@/assets/spices-collection.jpg";
-import rajasthaniThaliImg from "@/assets/rajasthani-thali.jpg";
+
 import cozyCornerImg from "@/assets/cozy-corner.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
