@@ -78,14 +78,7 @@ const Gallery = () => {
       category: "kitchen",
       description: "Our collection of authentic spices"
     },
-    {
-      id: 7,
-      url: rajasthaniThaliImg,
-      title: "Thali Special",
-      title_hindi: "थाली स्पेशल",
-      category: "food",
-      description: "Complete traditional thali"
-    },
+    
     {
       id: 8,
       url: cozyCornerImg,
